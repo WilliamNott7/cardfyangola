@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cardfy Angola</title>
+<meta name="description" content="Cardápio digital que facilita pedidos e valoriza o seu restaurante. QR Code, carrinho e pedidos directos para o WhatsApp." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Cardfy Angola" />
+    <meta property="og:description" content="Cardápio digital que facilita pedidos e valoriza o seu restaurante. QR Code, carrinho e pedidos directos para o WhatsApp." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="Cardápio digital que facilita pedidos e valoriza o seu restaurante. QR Code, carrinho e pedidos directos para o WhatsApp." />
+    <meta property="og:image" content="https://cardfyangola.vercel.app/sobre.png" />
+    <meta property="og:locale" content="pt_PT" />
+
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cardfy Angola" />
+    <meta name="twitter:description" content="Cardápio digital que facilita pedidos e valoriza o seu restaurante. QR Code, carrinho e pedidos directos para o WhatsApp." />
+    <meta name="twitter:image" content="https://cardfyangola.vercel.app/sobre.png" />
+    
+    
+            <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://rosariocatonde.vercel.app/Cardfy_Logo_Icone.png" />
+    <link rel="apple-touch-icon" href="https://rosariocatonde.vercel.app/Cardfy_Logo_Icone.png" />
+    
+    
+    
+    
+    
+        <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://cardfyangola.vercel.app/sobre.jpg" />
+    <link rel="apple-touch-icon" href="https://cardfyangola.vercel.app/sobre.jpg" />
+
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+
+
+
+
+
+
+
+
+<style>
+  :root{
+    --bg-deep:#152019;
+    --bg-deep-2:#1b2921;
+    --panel:#1f2d25;
+    --panel-2:#26362c;
+    --paper:#f1ead9;
+    --paper-2:#e8dfc9;
+    --ink:#161f14;
+    --ink-soft:#3c4a37;
+    --cream:#f4efe2;
+    --muted-dark:#9fae9a;
+    --muted-light:#6a7864;
+    --gold:#c69a2e;
+    --gold-bright:#e3bc55;
+    --gold-deep:#93731f;
+    --whats:#3fae59;
+    --line-dark:rgba(244,239,226,0.14);
+    --line-paper:rgba(22,31,20,0.14);
+    --shadow-phone:0 40px 80px -30px rgba(0,0,0,0.65), 0 15px 30px -15px rgba(0,0,0,0.5);
+    --radius-lg:28px;
+    --radius-md:16px;
+    --radius-sm:10px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg-deep);
+    color:var(--cream);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{margin:0;padding:0;list-style:none;}
+  button{font-family:inherit;cursor:pointer;}
+  h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:500;margin:0;line-height:1.08;letter-spacing:-0.01em;}
+  p{margin:0;}
+  section{position:relative;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+  .eyebrow{
+    font-size:0.95rem;
+    color:var(--gold-bright);
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-weight:500;
+    margin-bottom:14px;
+    display:inline-block;
+  }
+  .section--paper .eyebrow{color:var(--gold-deep);}
+
+  :focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;}
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:15px 28px;border-radius:999px;font-size:0.98rem;font-weight:600;
+    border:1px solid transparent;transition:transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
+    white-space:nowrap;
+  }
+  .btn:active{transform:scale(0.97);}
+  .btn-gold{background:var(--gold);color:#1b1400;}
+  .btn-gold:hover{background:var(--gold-bright);}
+  .btn-outline{border-color:var(--line-dark);color:var(--cream);background:transparent;}
+  .btn-outline:hover{border-color:var(--gold-bright);color:var(--gold-bright);}
+  .section--paper .btn-outline{border-color:var(--line-paper);color:var(--ink);}
+  .section--paper .btn-outline:hover{border-color:var(--gold-deep);color:var(--gold-deep);}
+  .btn-whats{background:var(--whats);color:#eafff0;}
+  .btn-whats:hover{background:#379e4d;}
+  .btn-block{width:100%;}
+  .btn-sm{padding:10px 18px;font-size:0.86rem;}
+
+  /* ---------- header ---------- */
+  .site-header{
+    position:sticky;top:0;z-index:60;
+    background:rgba(21,32,25,0.86);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line-dark);
+  }
+  .site-header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;}
+  .logo{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:600;letter-spacing:-0.01em;color:var(--cream);display:flex;align-items:center;gap:8px;}
+  .logo em{color:var(--gold-bright);font-style:italic;}
+  nav.primary-nav{display:flex;align-items:center;gap:32px;}
+  nav.primary-nav a{font-size:0.94rem;color:var(--muted-dark);transition:color .15s ease;}
+  nav.primary-nav a:hover{color:var(--cream);}
+  .header-cta{display:flex;align-items:center;gap:18px;}
+  .hamburger{display:none;background:none;border:none;color:var(--cream);padding:8px;}
+  .mobile-nav{
+    display:none;position:fixed;inset:76px 0 0 0;background:var(--bg-deep);z-index:59;
+    padding:24px 28px;border-top:1px solid var(--line-dark);
+  }
+  .mobile-nav.open{display:block;}
+  .mobile-nav a{display:block;padding:16px 0;border-bottom:1px solid var(--line-dark);font-size:1.15rem;color:var(--cream);font-family:'Fraunces',serif;}
+
+  @media (max-width:900px){
+    nav.primary-nav{display:none;}
+    .header-cta .btn-gold-desktop{display:none;}
+    .hamburger{display:block;}
+  }
+
+  /* ---------- section paddings + variants ---------- */
+  .section{padding:112px 0;}
+  .section--paper{background:var(--paper);color:var(--ink);}
+  .section--paper .muted{color:var(--muted-light);}
+  .muted{color:var(--muted-dark);}
+  @media (max-width:700px){ .section{padding:76px 0;} }
+
+  .divider{height:64px;position:relative;overflow:hidden;}
+  .divider svg{position:absolute;width:100%;height:100%;}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:88px 0 100px;overflow:hidden;position:relative;}
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(680px 420px at 82% 8%, rgba(198,154,46,0.16), transparent 60%),
+      radial-gradient(500px 400px at 10% 90%, rgba(198,154,46,0.08), transparent 60%);
+    pointer-events:none;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center;position:relative;}
+  @media (max-width:960px){ .hero-grid{grid-template-columns:1fr;} }
+  .hero-copy .eyebrow{margin-bottom:20px;}
+  .hero-copy h1{font-size:clamp(2.1rem,4.6vw,3.35rem);max-width:15ch;}
+  .hero-copy .sub{margin-top:24px;font-size:1.14rem;color:var(--muted-dark);max-width:46ch;}
+  .hero-actions{display:flex;gap:16px;margin-top:38px;flex-wrap:wrap;}
+  .hero-note{margin-top:34px;display:flex;align-items:center;gap:14px;color:var(--muted-dark);font-size:0.92rem;}
+  .hero-note .dot{width:7px;height:7px;border-radius:50%;background:var(--whats);flex:none;}
+
+  /* ---------- phone mockup ---------- */
+  .phone-stage{display:flex;justify-content:center;position:relative;}
+  .phone-glow{
+    position:absolute;width:320px;height:320px;border-radius:50%;
+    background:radial-gradient(circle, rgba(198,154,46,0.25), transparent 70%);
+    filter:blur(10px);top:20%;
+  }
+  .phone{
+    position:relative;width:308px;max-width:86vw;
+    background:#0e1512;border-radius:44px;padding:14px;
+    box-shadow:var(--shadow-phone);
+    border:1px solid rgba(244,239,226,0.08);
+    transition:box-shadow .3s ease;
+  }
+  .phone.pulse{animation:pulseGlow 1.6s ease;}
+  @keyframes pulseGlow{
+    0%{box-shadow:var(--shadow-phone), 0 0 0 0 rgba(230,188,85,0.5);}
+    40%{box-shadow:var(--shadow-phone), 0 0 0 18px rgba(230,188,85,0);}
+    100%{box-shadow:var(--shadow-phone), 0 0 0 0 rgba(230,188,85,0);}
+  }
+  .phone-notch{position:absolute;top:14px;left:50%;transform:translateX(-50%);width:110px;height:22px;background:#0e1512;border-radius:0 0 16px 16px;z-index:5;}
+  .phone-screen{
+    background:var(--paper);color:var(--ink);border-radius:32px;overflow:hidden;
+    height:600px;display:flex;flex-direction:column;position:relative;
+  }
+  .app-top{
+    background:var(--bg-deep-2);color:var(--cream);padding:30px 18px 14px;flex:none;
+  }
+  .app-top .restaurant-row{display:flex;align-items:center;gap:10px;}
+  .app-top .r-badge{
+    width:38px;height:38px;border-radius:10px;background:var(--gold);
+    display:flex;align-items:center;justify-content:center;color:#1b1400;font-family:'Fraunces',serif;font-weight:700;font-size:1.1rem;flex:none;
+  }
+  .app-top .r-name{font-family:'Fraunces',serif;font-size:1.05rem;}
+  .app-top .r-meta{font-size:0.74rem;color:var(--muted-dark);margin-top:2px;}
+  .cat-tabs{display:flex;gap:8px;overflow-x:auto;padding:14px 14px 0;flex:none;scrollbar-width:none;}
+  .cat-tabs::-webkit-scrollbar{display:none;}
+  .cat-tab{
+    flex:none;padding:8px 16px;border-radius:999px;font-size:0.82rem;font-weight:600;
+    background:transparent;border:1px solid var(--line-paper);color:var(--ink-soft);
+  }
+  .cat-tab.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .item-list{flex:1;overflow-y:auto;padding:14px 14px 100px;display:flex;flex-direction:column;gap:12px;}
+  .menu-item{display:flex;gap:12px;background:#fffefb;border:1px solid var(--line-paper);border-radius:var(--radius-sm);padding:9px;align-items:center;}
+  .menu-item img{width:58px;height:58px;border-radius:8px;object-fit:cover;flex:none;}
+  .menu-item .mi-info{flex:1;min-width:0;}
+  .menu-item .mi-name{font-size:0.87rem;font-weight:600;color:var(--ink);}
+  .menu-item .mi-desc{font-size:0.72rem;color:var(--muted-light);margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .menu-item .mi-price{font-size:0.8rem;color:var(--gold-deep);font-weight:700;margin-top:4px;}
+  .mi-add{
+    flex:none;width:32px;height:32px;border-radius:50%;background:var(--ink);color:var(--paper);
+    border:none;font-size:1.1rem;display:flex;align-items:center;justify-content:center;
+  }
+  .mi-stepper{flex:none;display:flex;align-items:center;gap:8px;}
+  .mi-stepper button{width:26px;height:26px;border-radius:50%;border:1px solid var(--line-paper);background:#fff;color:var(--ink);font-size:0.95rem;display:flex;align-items:center;justify-content:center;}
+  .mi-stepper span{font-size:0.85rem;font-weight:700;min-width:14px;text-align:center;}
+
+  .cart-bar{
+    position:absolute;left:12px;right:12px;bottom:12px;background:var(--ink);color:var(--paper);
+    border-radius:16px;padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:10px;
+    box-shadow:0 12px 30px -8px rgba(0,0,0,0.5);transform:translateY(120%);transition:transform .3s ease;
+  }
+  .cart-bar.show{transform:translateY(0);}
+  .cart-bar .cb-left{font-size:0.78rem;}
+  .cart-bar .cb-left b{display:block;font-size:0.95rem;font-family:'Fraunces',serif;}
+  .cart-bar button{background:var(--whats);color:#0d1b10;border:none;border-radius:999px;padding:9px 15px;font-size:0.8rem;font-weight:700;display:flex;align-items:center;gap:6px;}
+
+  /* ---------- COMO FUNCIONA ---------- */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line-paper);border:1px solid var(--line-paper);border-radius:var(--radius-md);overflow:hidden;margin-top:56px;}
+  @media (max-width:820px){ .steps{grid-template-columns:1fr;} }
+  .step{background:var(--paper);padding:40px 32px;}
+  .step .step-num{font-family:'Fraunces',serif;font-style:italic;font-size:2.6rem;color:var(--gold-deep);line-height:1;}
+  .step h3{margin-top:22px;font-size:1.28rem;max-width:20ch;}
+  .step p{margin-top:12px;color:var(--muted-light);font-size:0.96rem;max-width:32ch;}
+
+  .section-head{max-width:640px;}
+  .section-head h2{font-size:clamp(1.7rem,3.4vw,2.5rem);}
+  .section-head p{margin-top:16px;font-size:1.05rem;}
+  .section--paper .section-head p{color:var(--muted-light);}
+  .section--dark .section-head p{color:var(--muted-dark);}
+
+  /* ---------- FUNCIONALIDADES ---------- */
+  .feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);margin-top:56px;border-radius:var(--radius-md);overflow:hidden;}
+  @media (max-width:980px){ .feat-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:560px){ .feat-grid{grid-template-columns:1fr;} }
+  .feat{background:var(--panel);padding:32px 26px;min-height:200px;display:flex;flex-direction:column;gap:16px;}
+  .feat .icon{color:var(--gold-bright);}
+  .feat h3{font-size:1.03rem;font-weight:600;font-family:'Inter',sans-serif;}
+  .feat p{font-size:0.9rem;color:var(--muted-dark);}
+
+  /* ---------- DEMONSTRAÇÃO ---------- */
+  .demo-section{background:var(--bg-deep-2);}
+  .demo-inner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:26px;}
+  .demo-inner h2{font-size:clamp(1.8rem,3.6vw,2.6rem);max-width:18ch;}
+  .demo-inner p{max-width:52ch;color:var(--muted-dark);font-size:1.05rem;}
+  .demo-piloto{
+    margin-top:18px;border:1px solid var(--line-dark);border-radius:var(--radius-md);
+    padding:22px 26px;max-width:560px;text-align:left;display:flex;gap:16px;align-items:flex-start;
+    background:rgba(244,239,226,0.03);
+  }
+  .demo-piloto .icon{color:var(--gold-bright);flex:none;margin-top:2px;}
+  .demo-piloto p{color:var(--muted-dark);font-size:0.92rem;max-width:none;}
+  .demo-piloto strong{color:var(--cream);}
+
+  /* ---------- PLANOS ---------- */
+  .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px;align-items:stretch;}
+  @media (max-width:980px){ .plans-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:680px){ .plans-grid{grid-template-columns:1fr;} }
+
+  .plan-card{
+    background:#fffefb;border:1px solid var(--line-paper);border-radius:var(--radius-lg);
+    padding:36px 30px;display:flex;flex-direction:column;position:relative;
+  }
+  .plan-card--highlight{
+    background:var(--ink);border-color:var(--ink);color:var(--paper);
+    transform:translateY(-10px);
+    box-shadow:0 30px 60px -25px rgba(0,0,0,0.35);
+  }
+  @media (max-width:980px){ .plan-card--highlight{transform:none;} }
+
+  .plan-tag{
+    align-self:flex-start;font-size:0.74rem;font-weight:600;color:var(--gold-deep);
+    border:1px solid var(--line-paper);padding:5px 13px;border-radius:999px;margin-bottom:18px;
+  }
+  .plan-card--highlight .plan-tag{color:var(--gold-bright);border-color:rgba(230,188,85,0.4);}
+
+  .plan-card h3{font-size:1.35rem;}
+  .plan-card--highlight h3{color:var(--paper);}
+  .plan-card .plan-desc{margin-top:8px;font-size:0.88rem;color:var(--muted-light);min-height:40px;}
+  .plan-card--highlight .plan-desc{color:var(--muted-dark);}
+
+  .plan-price{margin-top:22px;padding-top:22px;border-top:1px solid var(--line-paper);}
+  .plan-card--highlight .plan-price{border-color:var(--line-dark);}
+  .plan-price .price-main{font-family:'Fraunces',serif;font-size:1.7rem;color:var(--ink);}
+  .plan-card--highlight .plan-price .price-main{color:var(--paper);}
+  .plan-price .price-sub{font-size:0.78rem;color:var(--muted-light);display:block;margin-top:2px;}
+  .plan-price .price-monthly{display:block;margin-top:10px;font-size:0.92rem;color:var(--gold-deep);font-weight:600;}
+  .plan-card--highlight .plan-price .price-monthly{color:var(--gold-bright);}
+
+  .plan-features{margin-top:24px;display:flex;flex-direction:column;gap:12px;flex:1;}
+  .plan-features li{display:flex;gap:10px;align-items:flex-start;font-size:0.9rem;color:var(--ink-soft);}
+  .plan-card--highlight .plan-features li{color:var(--muted-dark);}
+  .plan-features li svg{flex:none;margin-top:3px;color:var(--gold-deep);}
+  .plan-card--highlight .plan-features li svg{color:var(--gold-bright);}
+
+  .plan-card .btn{margin-top:28px;}
+  .plan-card--highlight .btn-outline{border-color:var(--line-dark);color:var(--paper);}
+  .plan-card--highlight .btn-outline:hover{border-color:var(--gold-bright);color:var(--gold-bright);}
+
+  .plan-note{margin-top:28px;font-size:0.88rem;color:var(--muted-light);max-width:70ch;line-height:1.6;}
+  .plan-note strong{color:var(--ink);}
+
+  /* ---------- CONFIANÇA / CONTACTO ---------- */
+  .trust-contact{display:grid;grid-template-columns:0.85fr 1.15fr;gap:70px;margin-top:56px;align-items:flex-start;}
+  @media (max-width:900px){ .trust-contact{grid-template-columns:1fr;gap:48px;} }
+  .trust-list{display:flex;flex-direction:column;gap:26px;}
+  .trust-item{display:flex;gap:16px;align-items:flex-start;}
+  .trust-item .icon{color:var(--gold-bright);flex:none;margin-top:3px;}
+  .trust-item h4{font-family:'Inter',sans-serif;font-weight:600;font-size:1rem;}
+  .trust-item p{color:var(--muted-dark);font-size:0.92rem;margin-top:4px;}
+
+  .form-card{background:var(--panel);border:1px solid var(--line-dark);border-radius:var(--radius-md);padding:34px;}
+  .form-card h3{font-size:1.3rem;margin-bottom:6px;}
+  .form-card .form-sub{color:var(--muted-dark);font-size:0.9rem;margin-bottom:24px;}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media (max-width:520px){ .form-grid{grid-template-columns:1fr;} }
+  .field{display:flex;flex-direction:column;gap:6px;}
+  .field.full{grid-column:1/-1;}
+  .field label{font-size:0.82rem;color:var(--muted-dark);}
+  .field input, .field textarea{
+    background:var(--bg-deep);border:1px solid var(--line-dark);border-radius:10px;
+    padding:12px 14px;color:var(--cream);font-family:'Inter',sans-serif;font-size:0.94rem;resize:vertical;
+  }
+  .field input:focus, .field textarea:focus{border-color:var(--gold-bright);}
+  .form-card .btn{margin-top:22px;}
+  .form-msg{margin-top:14px;font-size:0.85rem;color:var(--whats);display:none;}
+  .form-msg.show{display:block;}
+
+  /* ---------- FAQ ---------- */
+  .faq-list{margin-top:48px;max-width:760px;border-top:1px solid var(--line-paper);}
+  .faq-item{border-bottom:1px solid var(--line-paper);}
+  .faq-item summary{
+    list-style:none;padding:22px 4px;display:flex;justify-content:space-between;align-items:center;
+    cursor:pointer;font-family:'Fraunces',serif;font-size:1.08rem;gap:20px;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary .plus{flex:none;font-size:1.3rem;color:var(--gold-deep);transition:transform .2s ease;}
+  .faq-item[open] summary .plus{transform:rotate(45deg);}
+  .faq-item .faq-a{padding:0 4px 22px;color:var(--muted-light);max-width:64ch;font-size:0.96rem;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--bg-deep-2);border-top:1px solid var(--line-dark);padding:64px 0 32px;}
+  .footer-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+  .footer-brand p{color:var(--muted-dark);max-width:34ch;margin-top:14px;font-size:0.92rem;}
+  .footer-cols{display:flex;gap:64px;flex-wrap:wrap;}
+  .footer-col h5{font-size:0.85rem;color:var(--muted-dark);font-weight:600;margin-bottom:14px;}
+  .footer-col a{display:block;color:var(--cream);font-size:0.92rem;padding:6px 0;}
+  .footer-col a:hover{color:var(--gold-bright);}
+  .footer-bottom{margin-top:56px;padding-top:24px;border-top:1px solid var(--line-dark);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted-light);font-size:0.82rem;}
+
+  /* ---------- EXTRA RESPONSIVE REFINEMENTS ---------- */
+  @media (max-width:480px){
+    .wrap{padding:0 18px;}
+    .section{padding:60px 0;}
+    .hero{padding:56px 0 64px;}
+    .hero-actions{flex-direction:column;align-items:stretch;}
+    .hero-actions .btn{width:100%;}
+    .phone{width:100%;padding:10px;}
+    .phone-screen{height:520px;}
+    .step{padding:30px 22px;}
+    .feat{padding:26px 20px;min-height:auto;}
+    .plan-card{padding:28px 22px;}
+    .plan-card--highlight{transform:none;}
+    .form-card{padding:24px 20px;}
+    .footer-cols{gap:36px;}
+    .footer-top{gap:32px;}
+  }
+  @media (max-width:360px){
+    .phone-screen{height:480px;}
+    .menu-item img{width:48px;height:48px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .phone.pulse{animation:none;}
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+  
+  
+  
+  
+  
+
+<!-- ================= HEADER ================= -->
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="#inicio" class="logo">Card<em>fy</em></a>
+    <nav class="primary-nav">
+      <a href="#inicio">Início</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#funcionalidades">Funcionalidades</a>
+      <a href="#demonstracao">Demonstração</a>
+      <a href="#planos">Planos</a>
+      <a href="#faq">Perguntas frequentes</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="header-cta">
+      <a href="#contacto" class="btn btn-gold btn-gold-desktop">Quero o meu cardápio</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#inicio">Início</a>
+  <a href="#como-funciona">Como funciona</a>
+  <a href="#funcionalidades">Funcionalidades</a>
+  <a href="#demonstracao">Demonstração</a>
+  <a href="#planos">Planos</a>
+  <a href="#faq">Perguntas frequentes</a>
+  <a href="#contacto">Contacto</a>
+  <a href="#contacto" style="margin-top:18px;"><span class="btn btn-gold btn-block">Quero o meu cardápio</span></a>
+</div>
+
+
+
+
+
+
+
+
+
+
+<main>
+
+
+
+
+<!-- =============== HERO ================= -->
+
+
+<section class="section hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Cardápios digitais para restaurantes</span>
+      <h1>Cardápio digital que facilita pedidos e valoriza o seu restaurante.</h1>
+      <p class="sub">Mostre os seus pratos com fotos e preços, receba pedidos pelo WhatsApp e disponibilize um QR Code para os clientes acessarem o cardápio pelo celular.</p>
+      <div class="hero-actions">
+        <button class="btn btn-gold" id="verDemoBtn">Ver demonstração</button>
+        <a href="#contacto" class="btn btn-outline">Solicitar cardápio digital</a>
+      </div>
+      <div class="hero-note"><span class="dot"></span> Experimente ao lado — é o cardápio real de um restaurante-piloto, a funcionar.</div>
+    </div>
+
+    <div class="phone-stage" id="demo-phone">
+      <div class="phone-glow"></div>
+      <div class="phone" id="phoneEl">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="app-top">
+            <div class="restaurant-row">
+              <div class="r-badge">ST</div>
+              <div>
+                <div class="r-name">Sabor de Talatona</div>
+                <div class="r-meta">Aberto agora · Grelhados &amp; cozinha angolana</div>
+              </div>
+            </div>
+            <div class="cat-tabs" id="catTabs"></div>
+          </div>
+          <div class="item-list" id="itemList"></div>
+          <div class="cart-bar" id="cartBar">
+            <div class="cb-left"><b id="cartTotal">0 Kz</b><span id="cartCount">0 itens</span></div>
+            <button id="sendOrderBtn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              Enviar pedido
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ============ COMO FUNCIONA ================= -->
+
+
+<section class="section section--paper" id="como-funciona">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">O caminho até ao seu cardápio</span>
+      <h2>Como funciona</h2>
+      <p>Do envio dos pratos ao primeiro pedido recebido no WhatsApp — em três passos simples.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>O restaurante envia o cardápio</h3>
+        <p>Pratos, preços, fotos, logótipo, contacto e horários de funcionamento.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>A Cardfy cria o cardápio digital</h3>
+        <p>Configuramos o site, organizamos as categorias e geramos o seu QR Code.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Os clientes fazem pedidos com facilidade</h3>
+        <p>Escaneiam o QR Code ou acedem ao link, escolhem os pratos e enviam o pedido ao WhatsApp do restaurante.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ============== FUNCIONALIDADES ================= -->
+<section class="section section--dark" id="funcionalidades">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Tudo o que o seu cardápio precisa</span>
+      <h2>Funcionalidades</h2>
+      <p>Recursos pensados para o dia a dia de um restaurante — sem complicação técnica para si ou para o seu cliente.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat">
+        <span class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.2"/><path d="M8 6l1.4-2.4h5.2L16 6"/></svg></span>
+        <h3>Cardápio com fotos, descrição e preço em Kz</h3>
+        <p>Cada prato apresentado com a informação certa para o cliente decidir rápido.</p>
+      </div>
+      <div class="feat">
+        <span class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8l8-4 8 4-8 4-8-4z"/><path d="M4 12l8 4 8-4"/><path d="M4 16l8 4 8-4"/></svg></span>
+        <h3>Categorias organizadas</h3>
+        <p>Pratos, bebidas, sobremesas e combos, cada um no seu lugar.</p>
+      </div>
+      <div class="feat">
+        <span class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h2l2.6 12.4a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L21 7H6"/></svg></span>
+        <h3>Carrinho de pedidos</h3>
+        <p>O cliente seleciona vários produtos e vê o total calculado na hora.</p>
+      </div>
+      <div class="feat">
+        <span class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+        <h3>Pedido directo no WhatsApp</h3>
+        <p>Formatado e organizado, pronto para o restaurante confirmar em segundos.</p>
+      </div>
+      <div class="feat">
+        <span class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM19 14h2M14 19h2M19 19h2v2"/></svg></span>
+        <h3>QR Code personalizado</h3>
+        <p>Para mesas, balcão, delivery e Instagram — um código para cada ponto de contacto.</p>
+      </div>
+      <div class="feat">
+        <span class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.6-9.3-9A5.3 5.3 0 0 1 12 6.5 5.3 5.3 0 0 1 21.3 12c-2.3 4.4-9.3 9-9.3 9z"/></svg></span>
+        <h3>Localização e contactos</h3>
+        <p>Horário, morada, contactos e redes sociais sempre em destaque.</p>
+      </div>
+      <div class="feat">
+        <span class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="15" rx="2.5"/><path d="M2 9h20"/><circle cx="7" cy="15" r="1"/></svg></span>
+        <h3>Site rápido e moderno</h3>
+        <p>Adaptado ao celular, do primeiro toque até ao envio do pedido.</p>
+      </div>
+      <div class="feat">
+        <span class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span>
+        <h3>Actualizações sob pedido</h3>
+        <p>Preços, pratos e promoções actualizados pela Cardfy sempre que precisar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ============== DEMONSTRAÇÃO ================= -->
+
+
+<section class="section demo-section" id="demonstracao">
+  <div class="wrap demo-inner">
+    <span class="eyebrow">Veja antes de decidir</span>
+    <h2>Experimente um cardápio digital, agora mesmo.</h2>
+    <p>O painel ao lado, no topo desta página, é um cardápio Cardfy real a funcionar: escolha categorias, adicione pratos ao carrinho e veja o pedido a formar-se — tal como um cliente sentado à mesa.</p>
+    <button class="btn btn-gold" id="verDemoBtn2">Experimente um cardápio digital</button>
+    <div class="demo-piloto">
+      <span class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg></span>
+      <p><strong>Sabor de Talatona</strong> é um restaurante-piloto criado para esta demonstração. </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= PLANOS ================= -->
+<section class="section section--paper" id="planos">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Escolha o ponto de partida</span>
+      <h2>Planos e preços</h2>
+      <p>Três formas de começar, consoante a dimensão do seu cardápio e o nível de acompanhamento que precisa.</p>
+    </div>
+
+
+
+
+    <div class="plans-grid">
+
+      <!-- ESSENCIAL -->
+      <div class="plan-card">
+        <span class="plan-tag">Condição de lançamento</span>
+        <h3>Cardfy Essencial</h3>
+        <p class="plan-desc">Para começar a receber pedidos pelo cardápio digital, sem complicações.</p>
+        <div class="plan-price">
+          <span class="price-main">30.000 Kz</span><span class="price-sub">criação do cardápio</span>
+          <span class="price-monthly">+ 5.000 Kz/mês</span>
+        </div>
+        <ul class="plan-features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Cardápio digital com fotos, preços e descrições</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>QR Code (mesa ou balcão)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Carrinho de encomenda com WhatsApp</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Até 30 itens no cardápio</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Reserva de mesa via WhatsApp</li>
+            
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Localização e horário de funcionamento
+          </li>
+              
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Actualizações sob pedido (até 2/mês)</li>
+        </ul>
+        <a href="#contacto" class="btn btn-outline btn-block">Escolher o Essencial</a>
+      </div>
+      
+      
+      
+
+      <!-- PROFISSIONAL (destaque) -->
+      
+      <div class="plan-card plan-card--highlight">
+        <span class="plan-tag">Mais escolhido</span>
+        <h3>Cardfy Profissional</h3>
+        <p class="plan-desc">Para restaurantes com cardápio maior e vários pontos de acesso ao QR Code.</p>
+        <div class="plan-price">
+          <span class="price-main">60.000 Kz</span><span class="price-sub">criação do cardápio</span>
+          <span class="price-monthly">+ 10.000 Kz/mês</span>
+        </div>
+        <ul class="plan-features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Tudo do plano Essencial</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Até 60 itens no cardápio</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Secção "Sobre Nós" com a história do restaurante</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Mapa incorporado directamente no site</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Destaque de promoções e pratos em banner
+          </li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Formulário de reserva completo (nome, telefone, observações)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Actualizações sob pedido (até 4/mês)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Suporte prioritário</li>
+        </ul>
+        <a href="#contacto" class="btn btn-gold btn-block">Escolher o Profissional</a>
+      </div>
+      
+      
+      
+      
+
+      <!-- PREMIUM -->
+      
+      <div class="plan-card">
+        <span class="plan-tag">Experiência completa</span>
+        <h3>Cardfy Premium</h3>
+        <p class="plan-desc">Para quem quer a apresentação mais cuidada e acompanhamento contínuo.</p>
+        <div class="plan-price">
+          <span class="price-main">120.000 Kz</span><span class="price-sub">criação do cardápio</span>
+          <span class="price-monthly">+ 18.000 Kz/mês</span>
+        </div>
+        <ul class="plan-features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Tudo do plano Profissional</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Itens ilimitados no cardápio</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Galeria de fotos com ampliação (lightbox)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Botão flutuante de WhatsApp</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Domínio personalizado (.co ou .com)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Actualizações ilimitadas</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Suporte prioritário com resposta no mesmo dia</li>
+        </ul>
+        <a href="#contacto" class="btn btn-outline btn-block">Escolher o Premium</a>
+      </div>
+
+    </div>
+
+    <p class="plan-note"><strong>Nota:</strong> a quantidade de itens acima do plano escolhido, personalizações adicionais e funcionalidades fora do pacote podem ser orçadas separadamente.</p>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ======== CONFIANÇA / CONTACTO ======== -->
+
+
+<section class="section section--dark" id="contacto">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Vamos digitalizar o seu cardápio</span>
+      <h2>Fale com a Cardfy</h2>
+      <p>Envie os dados do seu restaurante e entramos em contacto para os próximos passos.</p>
+    </div>
+    <div class="trust-contact">
+      <div class="trust-list">
+        <div class="trust-item">
+          <span class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.6-9.3-9A5.3 5.3 0 0 1 12 6.5 5.3 5.3 0 0 1 21.3 12c-2.3 4.4-9.3 9-9.3 9z"/></svg></span>
+          <div><h4>Feito para restaurantes em Luanda</h4><p>Conhecemos a realidade e o ritmo dos restaurantes da cidade.</p></div>
+        </div>
+        <div class="trust-item">
+          <span class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+          <div><h4>Prazo de entrega: 4 a 7 dias úteis</h4><p>Após recebermos o cardápio, as fotos e os dados necessários.</p></div>
+        </div>
+        <div class="trust-item">
+          <span class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+          <div><h4>WhatsApp profissional</h4><p>+244 936 584 701</p></div>
+        </div>
+      </div>
+
+
+
+
+      <div class="form-card">
+        <h3>Peça o seu cardápio digital</h3>
+        <p class="form-sub">Preencha os dados abaixo — a mensagem é enviada directamente para o nosso WhatsApp.</p>
+        <form id="contactForm">
+          <div class="form-grid">
+            <div class="field">
+              <label for="f-nome">Nome do restaurante</label>
+              <input id="f-nome" required placeholder="Ex: Sabor de Talatona" />
+            </div>
+            <div class="field">
+              <label for="f-resp">Responsável</label>
+              <input id="f-resp" required placeholder="O seu nome" />
+            </div>
+            <div class="field">
+              <label for="f-tel">Telefone</label>
+              <input id="f-tel" required placeholder="9xx xxx xxx" />
+            </div>
+            <div class="field">
+              <label for="f-bairro">Bairro</label>
+              <input id="f-bairro" required placeholder="Ex: Talatona" />
+            </div>
+            <div class="field full">
+              <label for="f-msg">Mensagem</label>
+              <textarea id="f-msg" rows="3" placeholder="Conte-nos um pouco sobre o seu restaurante"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-whats btn-block">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Enviar pelo WhatsApp
+          </button>
+          <p class="form-msg" id="formMsg">A abrir o WhatsApp com os seus dados...</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ====== FAQ ======== -->
+
+
+<section class="section section--paper" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Antes de começar</span>
+      <h2>Perguntas frequentes</h2>
+      <p>As dúvidas mais comuns dos restaurantes que estão a conhecer a Cardfy.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>Preciso de conhecimentos técnicos para ter um cardápio Cardfy?<span class="plus">+</span></summary>
+        <p class="faq-a">Não. Você envia os pratos, fotos e preços, e a Cardfy trata de toda a montagem e configuração do site.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Como funciona o pedido pelo WhatsApp?<span class="plus">+</span></summary>
+        <p class="faq-a">O cliente escolhe os pratos no carrinho e, ao confirmar, o pedido chega organizado — itens, quantidades e total — directamente no WhatsApp do restaurante.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quanto tempo demora até o cardápio ficar pronto?<span class="plus">+</span></summary>
+        <p class="faq-a">Entre 7 a 10 dias úteis, após recebermos o cardápio completo, as fotos e os dados do restaurante.</p>
+      </details>
+      <details class="faq-item">
+        <summary>E se eu quiser mudar um preço ou adicionar um prato depois?<span class="plus">+</span></summary>
+        <p class="faq-a">Basta enviar o pedido de alteração — as actualizações de cardápio estão incluídas na mensalidade de suporte.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Existe limite de pratos ou fotos?<span class="plus">+</span></summary>
+        <p class="faq-a">O plano de lançamento cobre um cardápio completo padrão. Quantidades acima disso ou personalizações extra são orçadas à parte.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ======= FOOTER ======= -->
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#inicio" class="logo">Card<em>fy</em></a>
+        <p>Cardápios digitais para restaurantes — do QR Code ao pedido no WhatsApp.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h5>Navegação</h5>
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#funcionalidades">Funcionalidades</a>
+          <a href="#planos">Planos</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contacto</h5>
+          <a href="#contacto">WhatsApp: +244 936 584 701</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Cardfy. Todos os direitos reservados.</span>
+      <span>Condição de lançamento para os primeiros restaurantes.</span>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+// ---- MOBILE NAV --------
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobileNav = document.getElementById('mobileNav');
+hamburgerBtn.addEventListener('click', () => {
+  const isOpen = mobileNav.classList.toggle('open');
+  hamburgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+});
+mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  mobileNav.classList.remove('open');
+  hamburgerBtn.setAttribute('aria-expanded', 'false');
+}));
+
+// ---------------- MENU DATA ----------------
+const RESTAURANT_WHATSAPP = '244936584701';
+
+const menuData = [
+  {
+    id: 'entradas', name: 'Entradas',
+    items: [
+      { id:'e1', name:'Pastéis de camarão', desc:'Massa fina, recheio de camarão temperado', price:2500, img:'https://images.unsplash.com/photo-1541014741259-de529411b96a?q=80&w=200&auto=format&fit=crop' },
+      { id:'e2', name:'Salada tropical', desc:'Alface, manga, tomate e vinagrete leve', price:3000, img:'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=200&auto=format&fit=crop' },
+      { id:'e3', name:'Sopa de peixe', desc:'Sopa encorpada com legumes frescos', price:3500, img:'https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=200&auto=format&fit=crop' },
+    ]
+  },
+  {
+    id: 'grelhados', name: 'Grelhados',
+    items: [
+      { id:'g1', name:'Muamba de galinha', desc:'Prato tradicional com quiabo e funge', price:6500, img:'https://images.unsplash.com/photo-1598515213692-d872ab226da5?q=80&w=200&auto=format&fit=crop' },
+      { id:'g2', name:'Costela grelhada', desc:'Grelhada no carvão, molho da casa', price:8000, img:'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=200&auto=format&fit=crop' },
+      { id:'g3', name:'Peixe grelhado com funge', desc:'Peixe do dia, acompanhado de funge', price:7500, img:'https://images.unsplash.com/photo-1467003909585-2f8a72700288?q=80&w=200&auto=format&fit=crop' },
+    ]
+  },
+  {
+    id: 'bebidas', name: 'Bebidas',
+    items: [
+      { id:'b1', name:'Sumo de maracujá', desc:'Natural, feito na hora', price:1500, img:'https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=200&auto=format&fit=crop' },
+      { id:'b2', name:'Água com gás', desc:'Garrafa 500ml', price:1000, img:'https://images.unsplash.com/photo-1553530666-ba11a7da3888?q=80&w=200&auto=format&fit=crop' },
+      { id:'b3', name:'Cerveja nacional', desc:'Bem gelada', price:1800, img:'https://images.unsplash.com/photo-1608270586620-248524c67de9?q=80&w=200&auto=format&fit=crop' },
+    ]
+  },
+  {
+    id: 'sobremesas', name: 'Sobremesas',
+    items: [
+      { id:'s1', name:'Doce de ginguba', desc:'Receita tradicional, feita na casa', price:2000, img:'https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=200&auto=format&fit=crop' },
+      { id:'s2', name:'Pudim de leite', desc:'Cremoso, com calda de caramelo', price:2200, img:'https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=200&auto=format&fit=crop' },
+    ]
+  },
+];
+
+let activeCategory = menuData[0].id;
+const cart = {};
+
+const catTabsEl = document.getElementById('catTabs');
+const itemListEl = document.getElementById('itemList');
+const cartBarEl = document.getElementById('cartBar');
+const cartTotalEl = document.getElementById('cartTotal');
+const cartCountEl = document.getElementById('cartCount');
+
+function formatKz(n){ return n.toLocaleString('pt-PT').replace(/,/g,'.') + ' Kz'; }
+
+function renderTabs(){
+  catTabsEl.innerHTML = '';
+  menuData.forEach(cat => {
+    const tab = document.createElement('button');
+    tab.className = 'cat-tab' + (cat.id === activeCategory ? ' active' : '');
+    tab.textContent = cat.name;
+    tab.addEventListener('click', () => { activeCategory = cat.id; renderTabs(); renderItems(); });
+    catTabsEl.appendChild(tab);
+  });
+}
+
+function renderItems(){
+  const cat = menuData.find(c => c.id === activeCategory);
+  itemListEl.innerHTML = '';
+  cat.items.forEach(item => {
+    const qty = cart[item.id] || 0;
+    const row = document.createElement('div');
+    row.className = 'menu-item';
+    row.innerHTML = `
+      <img src="${item.img}" alt="${item.name}" loading="lazy" />
+      <div class="mi-info">
+        <div class="mi-name">${item.name}</div>
+        <div class="mi-desc">${item.desc}</div>
+        <div class="mi-price">${formatKz(item.price)}</div>
+      </div>
+      <div class="mi-action"></div>
+    `;
+    const actionSlot = row.querySelector('.mi-action');
+    if(qty === 0){
+      const addBtn = document.createElement('button');
+      addBtn.className = 'mi-add';
+      addBtn.setAttribute('aria-label', 'Adicionar ' + item.name);
+      addBtn.textContent = '+';
+      addBtn.addEventListener('click', () => { cart[item.id] = 1; renderItems(); updateCartBar(); });
+      actionSlot.appendChild(addBtn);
+    } else {
+      const stepper = document.createElement('div');
+      stepper.className = 'mi-stepper';
+      stepper.innerHTML = `<button aria-label="Remover">–</button><span>${qty}</span><button aria-label="Adicionar">+</button>`;
+      stepper.children[0].addEventListener('click', () => {
+        cart[item.id] = Math.max(0, (cart[item.id]||0) - 1);
+        if(cart[item.id] === 0) delete cart[item.id];
+        renderItems(); updateCartBar();
+      });
+      stepper.children[2].addEventListener('click', () => {
+        cart[item.id] = (cart[item.id]||0) + 1;
+        renderItems(); updateCartBar();
+      });
+      actionSlot.appendChild(stepper);
+    }
+    itemListEl.appendChild(row);
+  });
+}
+
+function allItemsFlat(){
+  return menuData.flatMap(c => c.items);
+}
+
+function updateCartBar(){
+  const flat = allItemsFlat();
+  let total = 0, count = 0;
+  Object.entries(cart).forEach(([id, qty]) => {
+    const it = flat.find(i => i.id === id);
+    if(it){ total += it.price * qty; count += qty; }
+  });
+  cartTotalEl.textContent = formatKz(total);
+  cartCountEl.textContent = count + (count === 1 ? ' item' : ' itens');
+  cartBarEl.classList.toggle('show', count > 0);
+}
+
+document.getElementById('sendOrderBtn').addEventListener('click', () => {
+  const flat = allItemsFlat();
+  let total = 0;
+  let lines = [];
+  Object.entries(cart).forEach(([id, qty]) => {
+    const it = flat.find(i => i.id === id);
+    if(it){ total += it.price * qty; lines.push(`${qty}x ${it.name} — ${formatKz(it.price * qty)}`); }
+  });
+  if(lines.length === 0) return;
+  const msg = `Olá! Gostaria de fazer o seguinte pedido no Sabor de Talatona:\n\n${lines.join('\n')}\n\nTotal: ${formatKz(total)}`;
+  window.open(`https://wa.me/${RESTAURANT_WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank');
+});
+
+renderTabs();
+renderItems();
+updateCartBar();
+
+// ---------------- SCROLL TO DEMO + PULSE ----------------
+function scrollToDemo(){
+  const target = document.getElementById('demo-phone');
+  target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  const phone = document.getElementById('phoneEl');
+  phone.classList.remove('pulse');
+  void phone.offsetWidth;
+  phone.classList.add('pulse');
+}
+document.getElementById('verDemoBtn').addEventListener('click', scrollToDemo);
+document.getElementById('verDemoBtn2').addEventListener('click', scrollToDemo);
+
+// ---------------- CONTACT FORM ----------------
+document.getElementById('contactForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const nome = document.getElementById('f-nome').value.trim();
+  const resp = document.getElementById('f-resp').value.trim();
+  const tel = document.getElementById('f-tel').value.trim();
+  const bairro = document.getElementById('f-bairro').value.trim();
+  const msgTxt = document.getElementById('f-msg').value.trim();
+
+  const msg = `Olá, Cardfy! Gostaria de pedir um cardápio digital.\n\nRestaurante: ${nome}\nResponsável: ${resp}\nTelefone: ${tel}\nBairro: ${bairro}\nMensagem: ${msgTxt || '—'}`;
+  window.open(`https://wa.me/${RESTAURANT_WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank');
+
+  const formMsg = document.getElementById('formMsg');
+  formMsg.classList.add('show');
+  setTimeout(() => formMsg.classList.remove('show'), 4000);
+});
+</script>
+</body>
+</html>
+
