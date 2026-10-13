@@ -1,0 +1,1168 @@
+
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cardfy Angola</title>
+<meta name="description" content="Menus digitais premium para restaurantes em Angola. QR Code, carrinho de pedidos, reservas e pedidos diretos para o WhatsApp. Pacotes desde 150.000 Kz.">
+<meta name="theme-color" content="#4A1428">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:title" content="Cardfy Angola">
+<meta property="og:description" content="O cliente escaneia o QR Code, escolhe os pratos e envia o pedido para o WhatsApp do restaurante.">
+<meta property="og:url" content="https://cardfyangola.vercel.app/">
+<meta property="og:image" content="https://cardfyangola.vercel.app/sobre.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%234A1428'/%3E%3Ctext x='32' y='44' font-size='34' text-anchor='middle' fill='%23F2B032' font-family='Georgia,serif'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Cardfy Angola","description":"Menus digitais, canais de pedidos e websites premium para restaurantes em Angola.","url":"https://cardfyangola.vercel.app/","telephone":"+244936584701","areaServed":"Luanda, Angola","hasOfferCatalog":{"@type":"OfferCatalog","name":"Pacotes Cardfy","itemListElement":[{"@type":"Offer","name":"Cardfy Menu","price":"150000","priceCurrency":"AOA"},{"@type":"Offer","name":"Cardfy Order","price":"250000","priceCurrency":"AOA"},{"@type":"Offer","name":"Cardfy Experience","price":"400000","priceCurrency":"AOA"}]}}
+</script>
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#F6F4F5; --bg2:#EEE8EB; --paper:#FFFFFF;
+  --ink:#2A1220; --muted:#665560; --line:#DDD3D8;
+  --wine:#4A1428; --wine2:#5C1A35; --wine-ink:#F8EFF2; --wine-muted:#D4BCC6; --wine-line:rgba(248,239,242,.18);
+  --saffron:#F2B032; --saffron-ink:#2A1220;
+  --check:#A8680A; --focus:#7A1F45;
+  --wa:#1FAD56; --wa-ink:#06260F;
+  --shadow:0 18px 50px -24px rgba(42,18,32,.35);
+  --display:'Gloock',Georgia,'Times New Roman',serif;
+  --body:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#170A10; --bg2:#1F0E17; --paper:#28131F;
+    --ink:#F6EEF1; --muted:#BBA5AF; --line:#3C2230;
+    --check:#F2B032; --focus:#F2B032; --shadow:0 18px 50px -24px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#170A10; --bg2:#1F0E17; --paper:#28131F;
+  --ink:#F6EEF1; --muted:#BBA5AF; --line:#3C2230;
+  --check:#F2B032; --focus:#F2B032; --shadow:0 18px 50px -24px rgba(0,0,0,.7);
+}
+*,*::before,*::after{box-sizing:inherit;margin:0}
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:calc(76px + env(safe-area-inset-top,0px));
+  background:linear-gradient(var(--wine) 0 env(safe-area-inset-top,0px), var(--bg) 0);
+  -webkit-text-size-adjust:100%;
+}
+body{
+  background:var(--bg); color:var(--ink);
+  font:400 1.0625rem/1.6 var(--body);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+.wine{--focus:var(--saffron)}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.sec{padding-block:clamp(64px,9vw,120px)}
+h1,h2,h3,h4{font-weight:400;letter-spacing:-.01em}
+h1,h2,.display{font-family:var(--display)}
+h2{font-size:clamp(1.9rem,3.8vw,3rem);line-height:1.12;max-width:20ch}
+.lead{color:var(--muted);max-width:58ch;margin-top:16px}
+.sec-head{margin-bottom:clamp(36px,5vw,64px)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border-radius:999px;border:1.5px solid transparent;font-weight:600;text-decoration:none;cursor:pointer;transition:transform .15s ease, background-color .15s ease}
+.btn:active{transform:scale(.98)}
+.btn-pri{background:var(--saffron);color:var(--saffron-ink)}
+.btn-pri:hover{background:#F7C257}
+.btn-line{border-color:var(--wine-line);color:var(--wine-ink)}
+.btn-line:hover{background:rgba(248,239,242,.08)}
+.btn-dark{background:var(--ink);color:var(--bg)}
+.btn-wa{background:var(--wa);color:var(--wa-ink)}
+.btn-block{width:100%}
+
+/* Header */
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;background:var(--wine);color:var(--wine-ink);border-bottom:1px solid var(--wine-line)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.logo{font-family:var(--display);font-size:1.7rem;text-decoration:none;letter-spacing:-.02em}
+.logo i{color:var(--saffron);font-style:italic}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--wine-muted)}
+.nav a:hover{color:var(--wine-ink)}
+.hdr-cta{min-height:42px;padding:0 18px;font-size:.95rem}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--wine-line);border-radius:12px;background:none;cursor:pointer;align-items:center;justify-content:center}
+.burger span,.burger span::before,.burger span::after{display:block;width:18px;height:2px;background:var(--wine-ink);border-radius:2px;content:"";position:relative}
+.burger span::before{position:absolute;top:-6px}
+.burger span::after{position:absolute;top:6px}
+
+/* Hero */
+.hero{background:var(--wine);color:var(--wine-ink);position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(32px,6vw,80px);align-items:center;padding-block:clamp(48px,7vw,96px)}
+.hero h1{font-size:clamp(2rem,1.15rem + 4.2vw,4.5rem);line-height:1.06;max-width:15ch;text-wrap:balance;overflow-wrap:break-word}
+.hero .sub{color:var(--wine-muted);font-size:clamp(1rem,.9rem + .5vw,1.15rem);max-width:46ch;margin-top:clamp(16px,3vw,24px);text-wrap:pretty}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(24px,4vw,34px)}
+.facts{display:flex;flex-wrap:wrap;margin-top:44px;border-top:1px solid var(--wine-line);padding-top:22px;gap:12px 0}
+.facts p{font-size:.95rem;color:var(--wine-muted);padding-right:22px;margin-right:22px;border-right:1px solid var(--wine-line)}
+.facts p:last-child{border:0;margin:0;padding:0}
+.facts b{display:block;color:var(--wine-ink);font-weight:600}
+.hero-visual{position:relative;display:flex;flex-direction:column;align-items:center;gap:16px;width:100%;min-width:0}
+.stage{position:relative;width:100%;display:flex;justify-content:center;align-items:center;padding-block:clamp(20px,5vw,40px)}
+.ring{position:absolute;left:50%;top:50%;translate:-50% -50%;border-radius:50%;pointer-events:none}
+.ring.a{width:min(560px,96%);aspect-ratio:1;background:var(--wine2)}
+.ring.b{width:min(660px,124%);aspect-ratio:1;border:1px solid var(--wine-line)}
+.hero-copy > *{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+.hero-copy > *:nth-child(2){animation-delay:.08s}
+.hero-copy > *:nth-child(3){animation-delay:.16s}
+.hero-copy > *:nth-child(4){animation-delay:.24s}
+.hero-visual .phone-wrap{animation:rise .8s .2s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.caption{text-align:center;font-size:.85rem;color:var(--wine-muted);max-width:36ch;text-wrap:balance}
+
+/* QR floating card */
+.qrcard{position:absolute;left:-38%;bottom:12%;z-index:3;background:#fff;color:#2A1220;border-radius:18px;padding:14px;width:150px;box-shadow:0 20px 40px -18px rgba(0,0,0,.55);rotate:-5deg}
+.qrcard svg{width:100%;height:auto}
+.qrcard b{display:block;font-size:.85rem;line-height:1.25;margin-top:8px}
+.qrcard span{font-size:.75rem;color:#6a5560}
+
+/* Phone demo (fixed palette: the restaurant's own brand) */
+.phone-wrap{position:relative;z-index:2;width:min(340px,100%)}
+.phone{position:relative;z-index:2;width:100%;aspect-ratio:340/640;height:auto;border-radius:46px;background:#120A0E;padding:10px;box-shadow:0 40px 80px -30px rgba(0,0,0,.65), inset 0 0 0 1.5px #3b2a33}
+.screen{height:100%;border-radius:36px;overflow:hidden;background:#FBFBFA;color:#17231E;display:flex;flex-direction:column;position:relative}
+.screen::before{content:"";position:absolute;top:8px;left:50%;translate:-50% 0;width:84px;height:22px;border-radius:12px;background:#120A0E;z-index:5}
+.m-head{padding:40px 18px 12px;display:flex;gap:12px;align-items:center}
+.m-av{width:44px;height:44px;border-radius:50%;background:#0F5C4D;color:#fff;display:grid;place-items:center;font-weight:700;font-size:.95rem;flex:none}
+.m-head h3{font:700 1rem/1.2 var(--body);letter-spacing:0}
+.m-head p{font-size:.78rem;color:#4b5a54;line-height:1.3}
+.m-head p i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#1FAD56;margin-right:5px}
+.m-tabs{display:flex;gap:8px;padding:4px 18px 12px;overflow-x:auto;scrollbar-width:none}
+.m-tabs::-webkit-scrollbar{display:none}
+.m-tabs button{flex:none;border:1px solid #D9E0DC;background:#fff;border-radius:999px;padding:7px 14px;font-size:.83rem;font-weight:600;cursor:pointer}
+.m-tabs button[aria-selected="true"]{background:#0F5C4D;border-color:#0F5C4D;color:#fff}
+.m-list{list-style:none;padding:4px 18px 14px;overflow-y:auto;flex:1;scrollbar-width:thin}
+.it{display:grid;grid-template-columns:62px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #E8ECEA}
+.plate{width:62px;height:62px;border-radius:16px;background-color:#F3EFEB}
+.it h4{font:700 .92rem/1.25 var(--body);letter-spacing:0}
+.it p{font-size:.76rem;line-height:1.35;color:#5a6862;margin-top:2px}
+.pr{display:block;font-weight:700;font-size:.86rem;margin-top:4px;color:#0F5C4D;font-variant-numeric:tabular-nums}
+.ctl{display:flex;align-items:center;gap:8px}
+.ctl button{width:32px;height:32px;border-radius:50%;border:1.5px solid #0F5C4D;background:#fff;color:#0F5C4D;font-size:1.1rem;font-weight:700;line-height:1;cursor:pointer;display:grid;place-items:center}
+.ctl button[data-add]{background:#0F5C4D;color:#fff}
+.ctl output{min-width:14px;text-align:center;font-weight:700;font-size:.9rem}
+.m-bar{border-top:1px solid #E1E7E4;background:#fff;padding:12px 16px 16px;display:flex;align-items:center;gap:12px}
+.m-bar div{flex:1;min-width:0}
+.m-bar small{display:block;font-size:.74rem;color:#5a6862}
+.m-bar strong{font-size:1.1rem;font-variant-numeric:tabular-nums;display:inline-block}
+.m-bar strong.bump{animation:bump .3s ease}
+@keyframes bump{50%{transform:scale(1.12)}}
+.m-bar button{background:#1FAD56;color:#06260F;border:0;border-radius:999px;padding:12px 18px;font-weight:700;font-size:.9rem;cursor:pointer}
+.m-bar button:disabled{opacity:.4;cursor:not-allowed}
+.empty{padding:28px 0;font-size:.85rem;color:#5a6862}
+
+/* Before / after */
+.shift{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--paper)}
+.shift > div{padding:clamp(24px,4vw,48px)}
+.shift h3{font-family:var(--display);font-size:1.5rem;margin-bottom:20px}
+.shift ul{list-style:none;display:grid;gap:16px}
+.shift li{position:relative;padding-left:30px}
+.before{background:var(--bg2)}
+.before li{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(122,31,69,.55);text-decoration-thickness:1.5px}
+.before li::before{content:"";position:absolute;left:3px;top:.75em;width:14px;height:2px;background:var(--muted)}
+.after li::before{content:"";position:absolute;left:5px;top:.35em;width:7px;height:13px;border:solid var(--check);border-width:0 2.5px 2.5px 0;rotate:45deg}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4vw,56px);counter-reset:s}
+.step{border-top:2px solid var(--ink);padding-top:22px}
+.step::before{counter-increment:s;content:counter(s);font-family:var(--display);font-size:3.2rem;line-height:1;color:var(--check);display:block;margin-bottom:12px}
+.step h3{font-family:var(--body);font-weight:700;font-size:1.2rem;margin-bottom:8px;letter-spacing:0}
+.step p{color:var(--muted)}
+
+/* Features */
+.feat-layout{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.5fr);gap:clamp(32px,6vw,90px);align-items:start}
+.feat-layout .sec-head{position:sticky;top:110px;margin:0}
+.feat-list{display:grid;grid-template-columns:1fr 1fr;column-gap:36px}
+.feat{padding:22px 0;border-top:1px solid var(--line)}
+.feat h3{font:700 1.05rem/1.3 var(--body);letter-spacing:0;margin-bottom:6px}
+.feat p{color:var(--muted);font-size:.97rem}
+
+/* Order preview */
+.bg2{background:var(--bg2)}
+.order-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:clamp(32px,6vw,90px);align-items:center}
+.points{list-style:none;display:grid;gap:12px;margin:28px 0 32px}
+.points li{position:relative;padding-left:30px}
+.points li::before{content:"";position:absolute;left:5px;top:.35em;width:7px;height:13px;border:solid var(--check);border-width:0 2.5px 2.5px 0;rotate:45deg}
+.wa-chat{border-radius:24px;overflow:hidden;box-shadow:var(--shadow);background:#E4EBE7;color:#14201a;max-width:440px;margin-inline:auto;width:100%}
+.wa-top{background:#0B5E52;color:#fff;padding:14px 18px;display:flex;align-items:center;gap:12px}
+.wa-top .m-av{background:#fff;color:#0B5E52;width:38px;height:38px;font-size:.8rem}
+.wa-top b{display:block;font-size:.95rem;line-height:1.2}
+.wa-top small{font-size:.76rem;opacity:.85}
+.wa-body{padding:22px 16px 26px;display:grid;gap:12px;min-height:300px;align-content:start}
+.bub{max-width:88%;padding:10px 14px 8px;border-radius:14px;font-size:.93rem;line-height:1.45;white-space:pre-line;box-shadow:0 1px 1px rgba(0,0,0,.08)}
+.bub.in{background:#fff;border-top-left-radius:4px;justify-self:start}
+.bub.out{background:#D4F5CC;border-top-right-radius:4px;justify-self:end}
+.bub time{display:block;text-align:right;font-size:.7rem;color:#5d6b64;margin-top:4px}
+
+/* Projects */
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.proj{background:var(--paper);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
+.browser{background:#1B1217;padding:12px 12px 0}
+.bw-top{display:flex;align-items:center;gap:6px;padding:0 4px 10px}
+.bw-top i{width:9px;height:9px;border-radius:50%;background:#4D3B44;flex:none}
+.bw-top span{margin-left:10px;flex:1;min-width:0;text-align:center;font-size:.76rem;color:#C2AEB8;background:#2B1E26;padding:4px 12px;border-radius:999px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.shot{position:relative;aspect-ratio:16/11;border-radius:10px 10px 0 0;overflow:hidden}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;opacity:0;z-index:2}
+.shot.has-shot img{opacity:1}
+.mock{position:absolute;inset:0;padding:5% 6%;display:flex;flex-direction:column;color:#fff;overflow:hidden}
+.mock::after{content:"";position:absolute;right:-12%;top:-20%;width:56%;aspect-ratio:1;border-radius:50%;background:rgba(255,255,255,.07)}
+.mock.el{background:#12303A;--mk:#E08A4B}
+.mock.hy{background:#4B2A17;--mk:#E6B84F}
+.mock-nav{display:flex;justify-content:space-between;align-items:center;font-size:.74rem;position:relative;z-index:1}
+.mock-nav b{font-family:var(--display);font-weight:400;font-size:1rem}
+.mock-nav span{display:flex;gap:12px;opacity:.75}
+.mock h4{font-family:var(--display);font-size:clamp(1.15rem,2.8vw,1.75rem);line-height:1.1;margin-top:auto;max-width:15ch;position:relative;z-index:1}
+.mock p{font-size:.74rem;opacity:.82;margin-top:8px;max-width:36ch;position:relative;z-index:1}
+.mock-btns{display:flex;gap:8px;margin-top:12px;position:relative;z-index:1}
+.mock-btns em{font-style:normal;font-size:.72rem;font-weight:700;padding:6px 13px;border-radius:999px;border:1px solid rgba(255,255,255,.4)}
+.mock-btns em:first-child{background:var(--mk);border-color:var(--mk);color:#1B1217}
+.mock-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;position:relative;z-index:1}
+.mock-row small{font-size:.68rem;background:rgba(255,255,255,.13);padding:5px 10px;border-radius:8px}
+.proj-body{padding:26px 28px 28px;display:flex;flex-direction:column;gap:14px;flex:1}
+.proj-body h3{font-family:var(--display);font-size:1.7rem;line-height:1.1}
+.demo-tag{align-self:flex-start;background:var(--saffron);color:var(--saffron-ink);font-weight:700;font-size:.82rem;padding:5px 13px;border-radius:999px}
+.proj-kind{color:var(--muted);font-size:.93rem;margin-top:-6px}
+.proj-body > p{color:var(--ink);max-width:56ch}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0}
+.chips li{border:1px solid var(--line);border-radius:999px;padding:4px 13px;font-size:.86rem;color:var(--muted)}
+.proj-link{margin-top:auto;padding-top:8px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px}
+.proj-link span{color:var(--muted);font-size:.9rem}
+.proj-cta{margin-top:40px;border-top:1px solid var(--line);padding-top:30px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}
+.proj-cta p{font-family:var(--display);font-size:clamp(1.3rem,2.6vw,1.8rem);line-height:1.2}
+@media (max-width:900px){.proj-grid{grid-template-columns:1fr}}
+
+/* Plans */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
+.plan{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:30px 28px 26px}
+.plan h3{font-family:var(--display);font-size:1.9rem;line-height:1.1}
+.plan .tag{color:var(--muted);margin-top:10px;min-height:3.2em;font-size:.98rem}
+.price-l{font-size:.85rem;color:var(--muted);margin-top:22px}
+.price{display:flex;align-items:baseline;gap:8px;margin:2px 0 22px;font-variant-numeric:tabular-nums}
+.price b{font-family:var(--display);font-weight:400;font-size:3rem;line-height:1;letter-spacing:-.02em}
+.price span{font-weight:600;color:var(--muted)}
+.plan--star{background:var(--wine);color:var(--wine-ink);border-color:transparent;box-shadow:var(--shadow);padding-top:36px}
+.plan--star .tag,.plan--star .price-l,.plan--star .price span{color:var(--wine-muted)}
+.plan--star{--check:var(--saffron);--focus:var(--saffron);--line:var(--wine-line)}
+.badge{position:absolute;top:-14px;left:28px;background:var(--saffron);color:var(--saffron-ink);font-weight:700;font-size:.85rem;padding:6px 14px;border-radius:999px}
+.hl{list-style:none;display:grid;gap:11px;margin-top:26px;padding-top:24px;border-top:1px solid var(--line)}
+.hl li,.full li{position:relative;padding-left:26px;font-size:.97rem;line-height:1.45}
+.hl li::before,.full li::before{content:"";position:absolute;left:4px;top:.3em;width:6px;height:11px;border:solid var(--check);border-width:0 2px 2px 0;rotate:45deg}
+.ideal{margin-top:22px;font-size:.9rem;color:var(--muted);border-left:3px solid var(--check);padding-left:14px}
+.ideal b{color:var(--ink);font-weight:600}
+details.more{margin-top:20px;border-top:1px solid var(--line);padding-top:6px}
+details.more summary{list-style:none;cursor:pointer;font-weight:600;font-size:.95rem;padding:12px 0;display:flex;justify-content:space-between;align-items:center;gap:10px}
+details.more summary::-webkit-details-marker{display:none}
+details.more summary::after{content:"";width:9px;height:9px;border:solid currentColor;border-width:0 2px 2px 0;rotate:45deg;translate:0 -2px;transition:rotate .2s}
+details.more[open] summary::after{rotate:225deg;translate:0 2px}
+.full{list-style:none;display:grid;gap:9px;padding:6px 0 8px}
+.full h5{font:700 .8rem/1.3 var(--body);color:var(--muted);margin:14px 0 2px;padding-left:0;letter-spacing:.02em}
+.plan--star .full h5{color:var(--wine-muted)}
+.plan-cta{margin-top:6px}
+.fine{margin-top:28px;color:var(--muted);font-size:.92rem}
+
+/* Care */
+.care{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.care-card{border:1px solid var(--line);border-radius:22px;padding:30px 28px;background:var(--paper)}
+.care-card.alt{background:transparent;border-style:dashed}
+.care-card h3{font-family:var(--display);font-size:1.6rem}
+.care-card .price b{font-size:2.5rem}
+.care-card ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin-top:6px}
+.care-card li{position:relative;padding-left:24px;font-size:.95rem;line-height:1.4}
+.care-card li::before{content:"";position:absolute;left:3px;top:.3em;width:6px;height:11px;border:solid var(--check);border-width:0 2px 2px 0;rotate:45deg}
+
+/* Contact */
+.contact{background:var(--wine);color:var(--wine-ink)}
+.contact-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,90px);align-items:start}
+.contact .lead{color:var(--wine-muted)}
+.contact-facts{margin-top:36px;display:grid;gap:0}
+.contact-facts div{padding:18px 0;border-top:1px solid var(--wine-line)}
+.contact-facts b{display:block;font-weight:600}
+.contact-facts span,.contact-facts a{color:var(--wine-muted);text-decoration:none}
+.contact-facts a:hover{color:var(--saffron)}
+form.card{background:var(--paper);color:var(--ink);border-radius:24px;padding:clamp(22px,4vw,38px);display:grid;gap:16px;--focus:#7A1F45}
+form.card h3{font-family:var(--display);font-size:1.6rem}
+form.card .hint{color:var(--muted);font-size:.93rem;margin-top:-6px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:grid;gap:6px;font-weight:600;font-size:.9rem}
+input,select,textarea{font:inherit;font-weight:400;width:100%;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:12px;padding:12px 14px;min-height:48px}
+textarea{min-height:96px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--focus)}
+.status{min-height:1.4em;font-size:.9rem;color:var(--muted)}
+
+/* FAQ */
+.faq{max-width:820px}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 0;font-weight:600;font-size:1.1rem;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--display);font-size:1.6rem;line-height:1;color:var(--check);transition:rotate .2s}
+.faq details[open] summary::after{rotate:45deg}
+.faq details p{color:var(--muted);padding:0 40px 24px 0;max-width:68ch}
+
+/* Footer */
+.foot{background:var(--wine);color:var(--wine-muted);border-top:1px solid var(--wine-line);padding-block:48px 40px}
+.foot-in{display:flex;flex-wrap:wrap;gap:32px 64px;justify-content:space-between}
+.foot .logo{color:var(--wine-ink)}
+.foot p{max-width:34ch;margin-top:10px;font-size:.95rem}
+.foot nav{display:flex;flex-wrap:wrap;gap:10px 26px}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--saffron)}
+.copy{margin-top:36px;font-size:.85rem;border-top:1px solid var(--wine-line);padding-top:20px}
+
+/* Floating WhatsApp + mobile bar + toast */
+.fab{position:fixed;right:max(20px,env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:55;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 12px 28px -8px rgba(0,0,0,.5)}
+.fab svg{width:30px;height:30px}
+.bar{display:none}
+.toast{position:fixed;left:50%;bottom:calc(92px + env(safe-area-inset-bottom,0px));translate:-50% 20px;opacity:0;pointer-events:none;background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:14px;font-size:.92rem;max-width:min(92vw,420px);text-align:center;z-index:80;transition:opacity .25s, translate .25s}
+.toast.show{opacity:1;translate:-50% 0}
+
+/* Responsive */
+@media (max-width:1040px){
+  .plans{grid-template-columns:1fr;max-width:560px;margin-inline:auto}
+  .plan--star{order:-1}
+  .plan .tag{min-height:0}
+  .care{grid-template-columns:1fr}
+  .feat-layout{grid-template-columns:1fr}
+  .feat-layout .sec-head{position:static;margin-bottom:8px}
+}
+@media (max-width:960px){
+  .burger{display:inline-flex}
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--wine);padding:6px 20px 18px;border-bottom:1px solid var(--wine-line)}
+  .nav.open{display:flex}
+  .nav a{padding:14px 0;border-bottom:1px solid var(--wine-line);font-size:1.05rem}
+  .hdr-in{position:relative}
+}
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero h1{max-width:17ch}
+  .hero-copy{max-width:640px}
+  .order-grid,.contact-grid{grid-template-columns:1fr}
+  .shift{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr;gap:28px}
+}
+@media (max-width:820px){
+  body{padding-bottom:84px}
+  .fab{display:none}
+  .bar{display:grid;grid-template-columns:1fr 1.3fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:70;background:var(--wine);border-top:1px solid var(--wine-line);padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px))}
+  .bar .btn{min-height:48px;padding:0 12px;font-size:.95rem}
+}
+@media (max-width:680px){
+  .feat-list{grid-template-columns:1fr}
+  .care-card ul{grid-template-columns:1fr}
+  .row2{grid-template-columns:1fr}
+  .qrcard{display:none}
+  .hdr-cta{display:none}
+  .facts p{border:0;margin:0;padding-right:28px}
+}
+@media (max-width:560px){
+  .wrap{width:min(1180px,100% - 32px)}
+  .hero-grid{padding-top:36px}
+  .hero-actions .btn{flex:1 1 100%}
+  .facts{flex-direction:column;gap:14px;margin-top:30px}
+  .facts p{border:0;margin:0;padding:0}
+  .shift > div{padding:24px 20px}
+  .proj-body{padding:22px 20px 24px}
+  .plan{padding:28px 22px 24px}
+  .plan--star{padding-top:34px}
+  .badge{left:22px}
+  .care-card{padding:24px 20px}
+  .faq summary{font-size:1.02rem}
+  .faq details p{padding-right:0}
+  form.card{padding:22px 18px}
+  .m-head{padding-inline:14px}
+  .m-tabs{padding-inline:14px}
+  .m-list{padding-inline:14px}
+  .m-bar{padding-inline:12px}
+  .toast{max-width:calc(100vw - 32px)}
+}
+@media (max-width:380px){
+  .logo{font-size:1.5rem}
+  .btn{padding:0 18px}
+  .price b{font-size:2.5rem}
+  .care-card .price b{font-size:2.1rem}
+  .it{grid-template-columns:48px 1fr;gap:10px}
+  .plate{width:48px;height:48px;border-radius:12px}
+  .ctl{grid-column:2;justify-self:start}
+  .m-head h3{font-size:.95rem}
+  .m-head p{font-size:.74rem}
+  .m-bar button{padding:11px 14px;font-size:.85rem}
+  .mock-btns em{padding:5px 10px}
+  .mock-row small{font-size:.62rem}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition:none !important}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr wine">
+  <div class="wrap hdr-in">
+    <a class="logo" href="#inicio" aria-label="Cardfy, início">Card<i>fy</i></a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#funcionalidades">Funcionalidades</a>
+      <a href="#projectos">Modelos</a>
+      <a href="#pacotes">Pacotes</a>
+      <a href="#faq">Perguntas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn-pri hdr-cta" href="#contacto">Quero o meu menu</a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span></span></button>
+  </div>
+</header>
+
+
+
+
+
+
+
+<main id="inicio">
+  
+
+  
+  
+  <!-- HERO -->
+  <section class="hero wine">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1>O seu menu deixa de ser um PDF e passa a receber pedidos.</h1>
+        <p class="sub">O cliente escaneia o QR Code, escolhe os pratos e envia o pedido para o WhatsApp do restaurante. Organizado, com quantidades e total.</p>
+        <div class="hero-actions">
+          <a class="btn btn-pri" href="#pacotes">Ver pacotes</a>
+          <a class="btn btn-line" href="https://wa.me/244936584701?text=Ol%C3%A1%2C%20Cardfy!%20Quero%20saber%20mais%20sobre%20o%20menu%20digital." target="_blank" rel="noopener">Falar no WhatsApp</a>
+        </div>
+        <div class="facts">
+          <p><b>Desde 150.000 Kz</b>menu digital premium</p>
+          <p><b>QR Code personalizado</b>para cada mesa</p>
+          <p><b>Publicação online</b>incluída em todos</p>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="stage">
+        <span class="ring b" aria-hidden="true"></span>
+        <span class="ring a" aria-hidden="true"></span>
+
+        <div class="phone-wrap">
+        <div class="qrcard" aria-hidden="true">
+          <svg id="qr" viewBox="0 0 21 21" shape-rendering="crispEdges"></svg>
+          <b>Mesa 12</b><span>Escaneie para pedir</span>
+        </div>
+
+        <div class="phone" role="group" aria-label="Demonstração de menu digital">
+          <div class="screen">
+            <div class="m-head">
+              <div class="m-av" aria-hidden="true">ST</div>
+              <div>
+                <h3>Sabor de Talatona</h3>
+                <p><i></i>Aberto agora · Grelhados e cozinha angolana</p>
+              </div>
+            </div>
+            <div class="m-tabs" id="tabs" role="tablist" aria-label="Categorias"></div>
+            <ul class="m-list" id="list"></ul>
+            <div class="m-bar">
+              <div><small id="count">0 itens</small><strong id="total">0 Kz</strong></div>
+              <button id="send" type="button">Enviar pedido</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        <p class="caption">Experimente: é um menu Cardfy a funcionar. Restaurante-piloto, preços ilustrativos.</p>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  <!-- BEFORE / AFTER -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Onde está o seu menu hoje?</h2>
+        <p class="lead">Quase todos os restaurantes já têm um menu. O problema é onde ele vive e o trabalho que dá a quem quer pedir.</p>
+      </div>
+      <div class="shift">
+        <div class="before">
+          <h3>Hoje</h3>
+          <ul>
+            <li>PDF que é preciso ampliar com dois dedos</li>
+            <li>Fotografias enviadas uma a uma no WhatsApp</li>
+            <li>Preços desactualizados no Instagram</li>
+            <li>Menu de papel que se estraga e não se actualiza</li>
+          </ul>
+        </div>
+        <div class="after">
+          <h3>Com a Cardfy</h3>
+          <ul>
+            <li>Um link e um QR Code que abrem em qualquer telemóvel</li>
+            <li>Pratos, fotos e preços sempre actualizados</li>
+            <li>Pedidos que chegam organizados ao WhatsApp</li>
+            <li>Reservas, localização e horário no mesmo sítio</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- HOW -->
+  <section class="sec bg2" id="como-funciona">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Como funciona</h2>
+        <p class="lead">Do envio dos pratos ao primeiro pedido no WhatsApp, em três passos.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><h3>O restaurante envia o menu</h3><p>Pratos, preços, fotos, logótipo, contactos e horário de funcionamento.</p></div>
+        <div class="step"><h3>A Cardfy cria o menu digital</h3><p>Desenhamos a página, organizamos as categorias, geramos o QR Code e publicamos online.</p></div>
+        <div class="step"><h3>Os clientes pedem com facilidade</h3><p>Escaneiam o QR Code, escolhem os pratos e enviam o pedido ao WhatsApp do restaurante.</p></div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- FEATURES -->
+  <section class="sec" id="funcionalidades">
+    <div class="wrap feat-layout">
+      <div class="sec-head">
+        <h2>Tudo o que o seu menu precisa</h2>
+        <p class="lead">Pensado para o dia-a-dia de um restaurante, sem complicação técnica para si nem para o cliente.</p>
+      </div>
+      <div class="feat-list">
+        <div class="feat"><h3>Menu com fotos, descrição e preço em Kz</h3><p>Cada prato com a informação certa para o cliente decidir depressa.</p></div>
+        <div class="feat"><h3>Categorias organizadas</h3><p>Pratos, bebidas, sobremesas e combos, cada um no seu lugar.</p></div>
+        <div class="feat"><h3>Carrinho de pedidos</h3><p>Quantidades, remoção de itens e total calculado na hora.</p></div>
+        <div class="feat"><h3>Pedido directo no WhatsApp</h3><p>Chega formatado e pronto para o restaurante confirmar em segundos.</p></div>
+        <div class="feat"><h3>QR Code personalizado</h3><p>Para mesas, balcão, delivery e Instagram: um código para cada ponto de contacto.</p></div>
+        <div class="feat"><h3>Reservas</h3><p>O cliente reserva mesa sem sair da página.</p></div>
+        <div class="feat"><h3>Localização e horários</h3><p>Google Maps, horário de funcionamento, contactos e redes sociais em destaque.</p></div>
+        <div class="feat"><h3>Rápido em qualquer telemóvel</h3><p>Página responsiva, leve e com SEO local para ser encontrado no Google.</p></div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- ORDER PREVIEW -->
+  <section class="sec bg2" id="pedido">
+    <div class="wrap order-grid">
+      <div>
+        <h2>O que o restaurante recebe</h2>
+        <p class="lead">Sem áudios, sem “tem isto?”, sem somar de cabeça. O pedido chega escrito, com os itens e o total. Esta mensagem muda à medida que adiciona pratos no menu acima.</p>
+        <ul class="points">
+          <li>Itens e quantidades, linha a linha</li>
+          <li>Total calculado automaticamente</li>
+          <li>Pronto para confirmar com uma resposta</li>
+        </ul>
+        <a class="btn btn-dark" href="#inicio">Voltar ao menu</a>
+      </div>
+      <div class="wa-chat" role="img" aria-label="Exemplo de pedido recebido no WhatsApp">
+        <div class="wa-top">
+          <div class="m-av" aria-hidden="true">ST</div>
+          <div><b>Sabor de Talatona</b><small>pedidos · online</small></div>
+        </div>
+        <div class="wa-body" aria-live="polite">
+          <div class="bub in" id="msg"></div>
+          <div class="bub out" id="reply" hidden>Pedido recebido! Já estamos a preparar.<time>agora</time></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- PROJECTS -->
+  <section class="sec" id="projectos">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Modelos de demonstração</h2>
+        <p class="lead">Sites de exemplo criados pela Cardfy para mostrar o que podemos fazer. Abra-os no telemóvel, como faria um cliente à mesa.</p>
+      </div>
+
+      <div class="proj-grid">
+        <article class="proj">
+          <div class="browser">
+            <div class="bw-top" aria-hidden="true"><i></i><i></i><i></i><span>espacoluanda.vercel.app</span></div>
+            <div class="shot">
+              <div class="mock el" aria-hidden="true">
+                <div class="mock-nav"><b>Espaço Luanda</b><span><u style="text-decoration:none">Menu</u><u style="text-decoration:none">Agenda</u><u style="text-decoration:none">Eventos</u></span></div>
+                <h4>Onde a terra encontra o mar</h4>
+                <p>Carnes nobres na brasa, mariscos frescos e arte angolana na parede.</p>
+                <div class="mock-btns"><em>Ver menu</em><em>Reservar mesa</em></div>
+                <div class="mock-row"><small>Picanha · 18.500 Kz</small><small>Gambas · 14.000 Kz</small><small>Carrinho · 2 itens</small></div>
+              </div>
+              <img src="projectos/espacoluanda.jpg" alt="Captura do site Espaço Luanda" loading="lazy">
+            </div>
+          </div>
+          <div class="proj-body">
+            <span class="demo-tag">Modelo de demonstração</span>
+            <h3>Espaço Luanda Steak &amp; Sea</h3>
+            <p class="proj-kind">Exemplo de site para um restaurante gourmet</p>
+            <p>Modelo de site completo para um restaurante: menu com carrinho, agenda cultural semanal e pedido de orçamento para eventos.</p>
+            <ul class="chips">
+              <li>Carrinho + WhatsApp</li><li>Agenda cultural</li><li>Orçamento para eventos</li><li>Galeria</li><li>Menu em PDF</li><li>Google Maps</li>
+            </ul>
+            <div class="proj-link">
+              <a class="btn btn-dark" href="https://espacoluanda.vercel.app/" target="_blank" rel="noopener">Abrir o modelo</a>
+
+            </div>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="browser">
+            <div class="bw-top" aria-hidden="true"><i></i><i></i><i></i><span>happyyemen.vercel.app</span></div>
+            <div class="shot">
+              <div class="mock hy" aria-hidden="true">
+                <div class="mock-nav"><b>Happy Yemen</b><span><u style="text-decoration:none">Menu</u><u style="text-decoration:none">Galeria</u><u style="text-decoration:none">Contactos</u></span></div>
+                <h4>Sabores do Iémen em Luanda</h4>
+                <p>Sabores que contam uma história.</p>
+                <div class="mock-btns"><em>Ver menu</em><em>Reservar mesa</em></div>
+                <div class="mock-row"><small>6.000 – 14.000 Kz por pessoa</small><small>Terça a Domingo · 08:00–22:00</small></div>
+              </div>
+              <img src="projectos/happyyemen.jpg" alt="Captura do site Happy Yemen" loading="lazy">
+            </div>
+          </div>
+          <div class="proj-body">
+            <span class="demo-tag">Modelo de demonstração</span>
+            <h3>Happy Yemen Restaurante</h3>
+            <p class="proj-kind">Exemplo de site para um restaurante de gastronomia iemenita</p>
+            <p>Modelo de website com menu e carrinho, reservas confirmadas por WhatsApp, galeria e faixa de preço por pessoa. Os pratos e preços são ilustrativos.</p>
+            <ul class="chips">
+              <li>Carrinho + WhatsApp</li><li>Reservas</li><li>Galeria</li><li>Horário de funcionamento</li><li>Barra de contacto no telemóvel</li><li>SEO e Open Graph</li>
+            </ul>
+            <div class="proj-link">
+              <a class="btn btn-dark" href="https://happyyemen.vercel.app/" target="_blank" rel="noopener">Abrir o modelo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="proj-cta">
+        <p>Quer um modelo assim para o seu restaurante?</p>
+        <a class="btn btn-pri" href="#contacto">Quero o meu menu</a>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  <!-- PLANS -->
+  <section class="sec bg2" id="pacotes">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Escolha o ponto de partida</h2>
+        <p class="lead">Três pacotes, do menu digital profissional à experiência completa. Preços em kwanzas, como investimento inicial.</p>
+      </div>
+
+      <div class="plans">
+        <!-- MENU -->
+        <article class="plan">
+          <h3>Cardfy Menu</h3>
+          <p class="tag">Para restaurantes que querem profissionalizar o seu menu digital.</p>
+          <p class="price-l">Investimento inicial</p>
+          <p class="price"><b>150.000</b><span>Kz</span></p>
+          <a class="btn btn-dark btn-block" href="#contacto" data-plan="Cardfy Menu — 150.000 Kz">Escolher o Menu</a>
+          <ul class="hl">
+            <li>Menu digital premium com fotos, preços e descrições</li>
+            <li>QR Code personalizado</li>
+            <li>Página responsiva com design personalizado</li>
+            <li>WhatsApp, Google Maps e horário de funcionamento</li>
+            <li>Publicação online</li>
+          </ul>
+          <p class="ideal"><b>Ideal para</b> quem usa menu físico, PDF, fotografias no WhatsApp, Instagram, ou ainda não tem menu digital.</p>
+          <details class="more">
+            <summary>Ver a lista completa</summary>
+            <ul class="full">
+              <li>Menu digital premium</li><li>Categorias de produtos</li><li>Fotografias dos pratos</li><li>Preços</li><li>Descrições</li><li>QR Code personalizado</li><li>Página responsiva</li><li>WhatsApp</li><li>Google Maps</li><li>Horário de funcionamento</li><li>Contactos</li><li>Redes sociais</li><li>Design personalizado</li><li>Animações</li><li>SEO básico</li><li>Publicação online</li>
+            </ul>
+          </details>
+        </article>
+
+        <!-- ORDER -->
+        <article class="plan plan--star">
+          <span class="badge">Mais escolhido</span>
+          <h3>Cardfy Order</h3>
+          <p class="tag">Já não é só um menu: é um canal digital de pedidos.</p>
+          <p class="price-l">Investimento inicial</p>
+          <p class="price"><b>250.000</b><span>Kz</span></p>
+          <a class="btn btn-pri btn-block" href="#contacto" data-plan="Cardfy Order — 250.000 Kz">Escolher o Order</a>
+          <ul class="hl">
+            <li>Tudo do Cardfy Menu</li>
+            <li>Carrinho com quantidades e total automático</li>
+            <li>Pedido pelo WhatsApp com mensagem automática</li>
+            <li>Sistema de reservas</li>
+            <li>Promoções, destaques e galeria</li>
+            <li>WhatsApp flutuante e Mobile Bottom Bar</li>
+          </ul>
+          <details class="more">
+            <summary>Ver a lista completa</summary>
+            <ul class="full">
+              <li>Tudo do Cardfy Menu, mais:</li>
+              <li>Carrinho de pedidos</li><li>Adicionar/remover produtos</li><li>Quantidades</li><li>Cálculo automático do total</li><li>Pedido através do WhatsApp</li><li>Mensagem de pedido automática</li><li>Sistema de reservas</li><li>Galeria</li><li>Secção Sobre</li><li>Promoções</li><li>Destaques</li><li>CTA estratégicos</li><li>WhatsApp flutuante</li><li>Mobile Bottom Bar</li><li>Página de contacto</li><li>Google Maps integrado</li><li>Animações avançadas</li><li>SEO local básico</li>
+            </ul>
+          </details>
+        </article>
+
+        <!-- EXPERIENCE -->
+        <article class="plan">
+          <h3>Cardfy Experience</h3>
+          <p class="tag">Experiência digital premium para quem quer transformar a sua presença online.</p>
+          <p class="price-l">Investimento inicial</p>
+          <p class="price"><b>400.000</b><span>Kz</span></p>
+          <a class="btn btn-dark btn-block" href="#contacto" data-plan="Cardfy Experience — 400.000 Kz">Escolher o Experience</a>
+          <ul class="hl">
+            <li>Tudo do Cardfy Order</li>
+            <li>Homepage cinematográfica e design exclusivo</li>
+            <li>Identidade visual digital</li>
+            <li>Eventos, sala privada e esplanada</li>
+            <li>Avaliações, SEO local, Schema.org e Open Graph</li>
+            <li>Estrutura preparada para expansão</li>
+          </ul>
+          <details class="more">
+            <summary>Ver a lista completa</summary>
+            <ul class="full">
+              <li>Tudo do Cardfy Order, mais:</li>
+              <h5>Website premium</h5>
+              <li>Homepage cinematográfica</li><li>Design exclusivo</li><li>Identidade visual digital</li><li>Hero section premium</li><li>Sobre o restaurante</li><li>Experiência gastronómica</li><li>Menu avançado</li><li>Carrinho</li><li>Pedidos WhatsApp</li><li>Reservas</li><li>Galeria</li><li>Eventos</li><li>Promoções</li><li>Sala privada</li><li>Esplanada</li><li>Localização</li><li>Horários dinâmicos</li><li>Avaliações</li>
+              <h5>Visibilidade e desempenho</h5>
+              <li>SEO local</li><li>Schema.org</li><li>Open Graph</li><li>Performance optimizada</li>
+              <h5>Experiência</h5>
+              <li>Animações avançadas</li><li>Microinterações</li><li>Mobile experience</li><li>WhatsApp integrado</li><li>Google Maps</li><li>QR Code</li><li>Estrutura preparada para expansão</li>
+            </ul>
+          </details>
+        </article>
+      </div>
+      <p class="fine">Personalizações fora do pacote escolhido podem ser orçadas à parte.</p>
+    </div>
+  </section>
+  
+  
+  
+  
+  
+  
+
+  <!-- CARE -->
+  <section class="sec" id="manutencao">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Depois de publicado, a Cardfy cuida do resto</h2>
+        <p class="lead">A manutenção é um serviço separado dos pacotes. Contrate quando quiser que a Cardfy trate das actualizações do seu menu.</p>
+      </div>
+      <div class="care">
+        <article class="care-card">
+          <h3>Manutenção Cardfy</h3>
+          <p class="price-l">Mensal, para qualquer pacote</p>
+          <p class="price"><b>15.000</b><span>Kz/mês</span></p>
+          <ul>
+            <li>Actualização de pratos</li>
+            <li>Actualização de preços</li>
+            <li>Adição de produtos</li>
+            <li>Remoção de produtos</li>
+            <li>Alteração de horários</li>
+            <li>Actualização de promoções</li>
+            <li>Pequenas alterações de conteúdo</li>
+            <li>Manutenção técnica</li>
+            <li>Monitorização</li>
+            <li>Suporte</li>
+          </ul>
+        </article>
+        <article class="care-card alt">
+          <h3>Cardfy Care+</h3>
+          <p class="price-l">Mensal, para o pacote Experience</p>
+          <p class="price"><b>25.000</b><span>Kz/mês</span></p>
+          <p style="color:var(--muted);margin-bottom:18px">Tudo o que está na Manutenção Cardfy, com prioridade no atendimento e maior volume de alterações.</p>
+          <ul>
+            <li>Atendimento prioritário</li>
+            <li>Maior volume de alterações</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- CONTACT -->
+  <section class="sec contact wine" id="contacto">
+    <div class="wrap contact-grid">
+      <div>
+        <h2>Vamos digitalizar o seu menu</h2>
+        <p class="lead">Envie os dados do restaurante e entramos em contacto para os próximos passos.</p>
+        <div class="contact-facts">
+          <div><b>Feito para restaurantes</b><span>Conhecemos a realidade e o ritmo de uma cozinha.</span></div>
+          <div><b>Prazo de 7 dias úteis</b><span>No Cardfy Menu, depois de recebermos o menu, as fotos e os dados. Order e Experience: combinado na proposta.</span></div>
+          <div><b>WhatsApp profissional</b><a href="https://wa.me/244936584701" target="_blank" rel="noopener">+244 936 584 701</a></div>
+        </div>
+      </div>
+
+      <form class="card" id="form" novalidate>
+        <h3>Peça o seu menu digital</h3>
+        <p class="hint">A mensagem é enviada directamente para o nosso WhatsApp.</p>
+        <div class="row2">
+          <label>Nome do restaurante<input name="rest" required autocomplete="organization"></label>
+          <label>Responsável<input name="resp" required autocomplete="name"></label>
+        </div>
+        <div class="row2">
+          <label>Telefone<input name="tel" type="tel" required autocomplete="tel" inputmode="tel"></label>
+          <label>Bairro<input name="bairro" required></label>
+        </div>
+        <label>Pacote
+          <select name="plan" id="plan">
+            <option>Ainda não sei</option>
+            <option>Cardfy Menu — 150.000 Kz</option>
+            <option>Cardfy Order — 250.000 Kz</option>
+            <option>Cardfy Experience — 400.000 Kz</option>
+          </select>
+        </label>
+        <label>Mensagem (opcional)<textarea name="msg"></textarea></label>
+        <button class="btn btn-wa btn-block" type="submit">Enviar pelo WhatsApp</button>
+        <p class="status" id="status" role="status"></p>
+      </form>
+    </div>
+  </section>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  <!-- FAQ -->
+  <section class="sec" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Perguntas frequentes</h2>
+        <p class="lead">As dúvidas mais comuns de quem está a conhecer a Cardfy.</p>
+      </div>
+      <div class="faq">
+        <details><summary>Preciso de conhecimentos técnicos?</summary><p>Não. Envia os pratos, fotos e preços, e a Cardfy trata da montagem, da configuração e da publicação online.</p></details>
+        <details><summary>Qual a diferença entre Menu, Order e Experience?</summary><p>O Menu apresenta os seus pratos de forma profissional. O Order acrescenta carrinho, pedidos pelo WhatsApp e reservas. O Experience é um website completo, com identidade visual própria, eventos, avaliações e SEO local.</p></details>
+        <details><summary>Como funciona o pedido pelo WhatsApp?</summary><p>O cliente escolhe os pratos no carrinho e, ao confirmar, o pedido chega ao WhatsApp do restaurante com os itens, as quantidades e o total, pronto para confirmar.</p></details>
+        <details><summary>A manutenção é obrigatória?</summary><p>Não. Os pacotes são um investimento inicial e a manutenção é um serviço separado, de 15.000 Kz/mês (25.000 Kz/mês no Care+ do Experience), para quando quiser que a Cardfy trate das actualizações.</p></details>
+        <details><summary>E se quiser mudar um preço ou adicionar um prato?</summary><p>Com a Manutenção Cardfy basta enviar o pedido de alteração. Sem manutenção, fale connosco pelo WhatsApp e combinamos a melhor forma de o fazer.</p></details>
+        <details><summary>Quanto tempo demora até ficar pronto?</summary><p>O Cardfy Menu fica pronto em 7 dias úteis depois de recebermos o menu completo, as fotos e os dados. Para o Order e o Experience, o prazo é combinado na proposta.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-in">
+      <div>
+        <a class="logo" href="#inicio">Card<i>fy</i></a>
+        <p>Menus digitais para restaurantes: do QR Code ao pedido no WhatsApp.</p>
+      </div>
+      <nav aria-label="Rodapé">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#projectos">Modelos</a>
+        <a href="#pacotes">Pacotes</a>
+        <a href="#manutencao">Manutenção</a>
+        <a href="#faq">Perguntas</a>
+        <a href="https://wa.me/244936584701" target="_blank" rel="noopener">+244 936 584 701</a>
+      </nav>
+    </div>
+    <p class="copy">© 2026 Cardfy Angola. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Floating WhatsApp (desktop) -->
+
+
+
+<a class="fab" href="https://wa.me/244936584701?text=Ol%C3%A1%2C%20Cardfy!" target="_blank" rel="noopener" aria-label="Falar com a Cardfy no WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/><path fill="#1FAD56" d="M8.4 7.4c.2 3.6 3.8 7 7.4 7.4l1.2-1.4-2.3-1.2-.9.8a5.7 5.7 0 0 1-2.8-2.8l.8-.9-1.2-2.3z"/></svg>
+</a>
+
+<!-- Mobile bottom bar -->
+<div class="bar wine" role="navigation" aria-label="Atalhos">
+  <a class="btn btn-line" href="#pacotes">Ver pacotes</a>
+  <a class="btn btn-wa" href="https://wa.me/244936584701?text=Ol%C3%A1%2C%20Cardfy!" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+  var WA='244936584701';
+  var $=function(s){return document.querySelector(s)};
+
+  /* ---------- Demo menu ---------- */
+  var MENU=[
+    {id:'muamba',cat:'Pratos',name:'Muamba de galinha',desc:'Com funge, quiabos e óleo de palma.',price:6500,c:['#C65A1E','#E8A83A']},
+    {id:'calulu',cat:'Pratos',name:'Calulu de peixe',desc:'Peixe seco e fresco, quiabos e gimboa, com arroz.',price:7000,c:['#8F6A2A','#C9A15A']},
+    {id:'mufete',cat:'Pratos',name:'Mufete',desc:'Cacusso grelhado, feijão de óleo de palma, banana-pão e mandioca.',price:9500,c:['#5C7A33','#D9B65C']},
+    {id:'costeleta',cat:'Grelhados',name:'Costeleta na brasa',desc:'Costeleta de vaca com batata e salada.',price:12500,c:['#7A2E1F','#B9633F']},
+    {id:'frango',cat:'Grelhados',name:'Frango grelhado (meio)',desc:'Temperado com piri-piri, com batata frita.',price:8500,c:['#B5651D','#E3A857']},
+    {id:'lulas',cat:'Grelhados',name:'Lulas grelhadas',desc:'Com alho, azeite e arroz de manteiga.',price:11000,c:['#A8574A','#E2B39A']},
+    {id:'cuca',cat:'Bebidas',name:'Cuca',desc:'Cerveja angolana, 33 cl, bem gelada.',price:1500,c:['#C8921B','#F0CF6B']},
+    {id:'mucua',cat:'Bebidas',name:'Sumo de múcua',desc:'Do fruto do imbondeiro, natural.',price:2000,c:['#C9A66B','#EBD9B2']},
+    {id:'agua',cat:'Bebidas',name:'Água mineral',desc:'Sem gás, 50 cl.',price:800,c:['#5B9BB5','#C5E0EC']},
+    {id:'pudim',cat:'Sobremesas',name:'Pudim de leite',desc:'Caseiro, com calda de caramelo.',price:2500,c:['#B7762B','#EDC27D']},
+    {id:'mousse',cat:'Sobremesas',name:'Mousse de maracujá',desc:'Cremosa, servida fria.',price:2800,c:['#D9A21B','#F4DC82']}
+  ];
+  var CATS=['Pratos','Grelhados','Bebidas','Sobremesas'];
+  var cart={muamba:1,cuca:2};
+  var active='Pratos';
+  var tabs=$('#tabs'),list=$('#list'),total=$('#total'),count=$('#count'),send=$('#send');
+
+  function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.')+'\u00A0Kz'}
+  function find(id){for(var i=0;i<MENU.length;i++)if(MENU[i].id===id)return MENU[i]}
+
+  function renderTabs(){
+    tabs.innerHTML='';
+    CATS.forEach(function(c){
+      var b=document.createElement('button');
+      b.type='button';b.role='tab';b.textContent=c;
+      b.setAttribute('aria-selected',c===active?'true':'false');
+      b.addEventListener('click',function(){active=c;renderTabs();renderList(true)});
+      tabs.appendChild(b);
+    });
+  }
+  function renderList(reset){
+    var st=reset?0:list.scrollTop;
+    list.innerHTML='';
+    MENU.filter(function(m){return m.cat===active}).forEach(function(m){
+      var q=cart[m.id]||0;
+      var li=document.createElement('li');li.className='it';
+      var plate=document.createElement('span');plate.className='plate';plate.setAttribute('aria-hidden','true');
+      plate.style.backgroundImage='radial-gradient(circle at 50% 50%,'+m.c[0]+' 0 30%,'+m.c[1]+' 31% 56%,#EFEAE6 57% 100%)';
+      var body=document.createElement('div');
+      body.innerHTML='<h4></h4><p></p><span class="pr"></span>';
+      body.querySelector('h4').textContent=m.name;
+      body.querySelector('p').textContent=m.desc;
+      body.querySelector('.pr').textContent=fmt(m.price);
+      var ctl=document.createElement('div');ctl.className='ctl';
+      if(q>0){
+        ctl.innerHTML='<button type="button" data-dec="'+m.id+'" aria-label="Remover um '+m.name+'">\u2212</button><output>'+q+'</output><button type="button" data-add="'+m.id+'" aria-label="Adicionar um '+m.name+'">+</button>';
+      }else{
+        ctl.innerHTML='<button type="button" data-add="'+m.id+'" aria-label="Adicionar '+m.name+'">+</button>';
+      }
+      li.appendChild(plate);li.appendChild(body);li.appendChild(ctl);
+      list.appendChild(li);
+    });
+    list.scrollTop=st;
+  }
+  function renderBar(bump){
+    var n=0,t=0;
+    Object.keys(cart).forEach(function(id){n+=cart[id];t+=cart[id]*find(id).price});
+    count.textContent=n+(n===1?' item':' itens');
+    total.textContent=fmt(t);
+    send.disabled=n===0;
+    if(bump){total.classList.remove('bump');void total.offsetWidth;total.classList.add('bump')}
+  }
+  function renderMsg(){
+    var ids=Object.keys(cart),msg=$('#msg'),reply=$('#reply');
+    if(!ids.length){
+      msg.textContent='Ainda não há itens no pedido. Adicione pratos no menu e veja esta mensagem a formar-se.';
+      reply.hidden=true;return;
+    }
+    var t=0,lines=ids.map(function(id){var m=find(id),q=cart[id];t+=q*m.price;return q+'x '+m.name+' \u2014 '+fmt(q*m.price)});
+    var now=new Date(),hh=('0'+now.getHours()).slice(-2)+':'+('0'+now.getMinutes()).slice(-2);
+    msg.textContent='Olá, Sabor de Talatona! Gostava de fazer um pedido:\n\n'+lines.join('\n')+'\n\nTotal: '+fmt(t)+'\nMesa 12';
+    var tm=document.createElement('time');tm.textContent=hh;msg.appendChild(tm);
+    reply.hidden=false;
+  }
+  function update(bump){renderList(false);renderBar(bump);renderMsg()}
+
+  list.addEventListener('click',function(e){
+    var a=e.target.closest('[data-add]'),d=e.target.closest('[data-dec]');
+    if(a){var id=a.getAttribute('data-add');cart[id]=(cart[id]||0)+1;update(true)}
+    if(d){var id2=d.getAttribute('data-dec');cart[id2]=(cart[id2]||0)-1;if(cart[id2]<=0)delete cart[id2];update(true)}
+  });
+  send.addEventListener('click',function(){
+    toast('Demonstração: no menu real, isto abre o WhatsApp do restaurante.');
+    var t=$('#pedido');if(t)t.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+  });
+
+  var toastT;
+  function toast(t){var el=$('#toast');el.textContent=t;el.classList.add('show');clearTimeout(toastT);toastT=setTimeout(function(){el.classList.remove('show')},3600)}
+
+  renderTabs();renderList(true);renderBar(false);renderMsg();
+
+  /* ---------- Decorative QR ---------- */
+  (function(){
+    var n=21,s=11,svg=$('#qr'),out='';
+    function r(){s=(s*1103515245+12345)&0x7fffffff;return s/0x7fffffff}
+    function finder(x,y){return (x<7&&y<7)||(x>=n-7&&y<7)||(x<7&&y>=n-7)}
+    for(var y=0;y<n;y++)for(var x=0;x<n;x++){if(finder(x,y))continue;if(r()>.5)out+='<rect x="'+x+'" y="'+y+'" width="1" height="1"/>'}
+    [[0,0],[n-7,0],[0,n-7]].forEach(function(p){
+      out+='<path fill-rule="evenodd" d="M'+p[0]+' '+p[1]+'h7v7h-7z M'+(p[0]+1)+' '+(p[1]+1)+'v5h5v-5z"/><rect x="'+(p[0]+2)+'" y="'+(p[1]+2)+'" width="3" height="3"/>';
+    });
+    svg.innerHTML='<g fill="#2A1220">'+out+'</g>';
+  })();
+
+  /* ---------- Project screenshots (optional) ---------- */
+  document.querySelectorAll('.shot img').forEach(function(img){
+    function ok(){img.parentNode.classList.add('has-shot')}
+    if(img.complete&&img.naturalWidth)ok();else img.addEventListener('load',ok);
+  });
+
+  /* ---------- Nav ---------- */
+  var burger=$('#burger'),nav=$('#nav');
+  function closeNav(){nav.classList.remove('open');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Abrir menu')}
+  burger.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded',open);
+    burger.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');
+  });
+  nav.addEventListener('click',function(e){if(e.target.closest('a'))closeNav()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeNav()});
+
+  /* ---------- Plan buttons -> form ---------- */
+  var sel=$('#plan');
+  document.querySelectorAll('[data-plan]').forEach(function(a){
+    a.addEventListener('click',function(){sel.value=a.getAttribute('data-plan')});
+  });
+
+  /* ---------- Form -> WhatsApp ---------- */
+  var form=$('#form'),status=$('#status');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var f=form.elements,missing=['rest','resp','tel','bairro'].filter(function(k){return !f[k].value.trim()});
+    if(missing.length){
+      status.textContent='Preencha o nome do restaurante, o responsável, o telefone e o bairro.';
+      f[missing[0]].focus();return;
+    }
+    var txt='Olá, Cardfy! Quero um menu digital para o meu restaurante.\n\n'+
+      'Restaurante: '+f.rest.value.trim()+'\n'+
+      'Responsável: '+f.resp.value.trim()+'\n'+
+      'Telefone: '+f.tel.value.trim()+'\n'+
+      'Bairro: '+f.bairro.value.trim()+'\n'+
+      'Pacote: '+f.plan.value+
+      (f.msg.value.trim()?'\nMensagem: '+f.msg.value.trim():'');
+    status.textContent='A abrir o WhatsApp com os seus dados…';
+    window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(txt),'_blank','noopener');
+  });
+})();
+</script>
+</body>
+</html>
+
